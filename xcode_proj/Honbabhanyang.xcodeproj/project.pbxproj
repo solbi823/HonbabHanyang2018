@@ -12,8 +12,8 @@
 		38B4AEC520887B7A00EFDAE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B4AEC320887B7A00EFDAE4 /* Main.storyboard */; };
 		38B4AEC720887B7A00EFDAE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B4AEC620887B7A00EFDAE4 /* Assets.xcassets */; };
 		38B4AECA20887B7A00EFDAE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B4AEC820887B7A00EFDAE4 /* LaunchScreen.storyboard */; };
-		38B4AED520887B7B00EFDAE4 /* HonbabhanyangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4AED420887B7B00EFDAE4 /* HonbabhanyangTests.swift */; };
-		38B4AEE020887B7B00EFDAE4 /* HonbabhanyangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4AEDF20887B7B00EFDAE4 /* HonbabhanyangUITests.swift */; };
+		38B4AEEE20887B9300EFDAE4 /* restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4AEED20887B9300EFDAE4 /* restaurant.swift */; };
+		38DD71FF20A4349D007075FB /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD71FE20A4349D007075FB /* RestaurantTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,9 @@
 		38B4AEC920887B7A00EFDAE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38B4AECB20887B7A00EFDAE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38B4AED020887B7B00EFDAE4 /* HonbabhanyangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HonbabhanyangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38B4AED420887B7B00EFDAE4 /* HonbabhanyangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonbabhanyangTests.swift; sourceTree = "<group>"; };
-		38B4AED620887B7B00EFDAE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38B4AEDB20887B7B00EFDAE4 /* HonbabhanyangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HonbabhanyangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38B4AEDF20887B7B00EFDAE4 /* HonbabhanyangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonbabhanyangUITests.swift; sourceTree = "<group>"; };
-		38B4AEE120887B7B00EFDAE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38B4AEED20887B9300EFDAE4 /* restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restaurant.swift; sourceTree = "<group>"; };
+		38DD71FE20A4349D007075FB /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				38B4AEBE20887B7A00EFDAE4 /* Honbabhanyang */,
-				38B4AED320887B7B00EFDAE4 /* HonbabhanyangTests */,
-				38B4AEDE20887B7B00EFDAE4 /* HonbabhanyangUITests */,
 				38B4AEBD20887B7A00EFDAE4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,30 +95,14 @@
 			children = (
 				38B4AEBF20887B7A00EFDAE4 /* AppDelegate.swift */,
 				38B4AEC120887B7A00EFDAE4 /* ViewController.swift */,
+				38DD71FE20A4349D007075FB /* RestaurantTableViewController.swift */,
 				38B4AEC320887B7A00EFDAE4 /* Main.storyboard */,
 				38B4AEC620887B7A00EFDAE4 /* Assets.xcassets */,
 				38B4AEC820887B7A00EFDAE4 /* LaunchScreen.storyboard */,
 				38B4AECB20887B7A00EFDAE4 /* Info.plist */,
+				38B4AEED20887B9300EFDAE4 /* restaurant.swift */,
 			);
 			path = Honbabhanyang;
-			sourceTree = "<group>";
-		};
-		38B4AED320887B7B00EFDAE4 /* HonbabhanyangTests */ = {
-			isa = PBXGroup;
-			children = (
-				38B4AED420887B7B00EFDAE4 /* HonbabhanyangTests.swift */,
-				38B4AED620887B7B00EFDAE4 /* Info.plist */,
-			);
-			path = HonbabhanyangTests;
-			sourceTree = "<group>";
-		};
-		38B4AEDE20887B7B00EFDAE4 /* HonbabhanyangUITests */ = {
-			isa = PBXGroup;
-			children = (
-				38B4AEDF20887B7B00EFDAE4 /* HonbabhanyangUITests.swift */,
-				38B4AEE120887B7B00EFDAE4 /* Info.plist */,
-			);
-			path = HonbabhanyangUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B4AEEE20887B9300EFDAE4 /* restaurant.swift in Sources */,
 				38B4AEC220887B7A00EFDAE4 /* ViewController.swift in Sources */,
+				38DD71FF20A4349D007075FB /* RestaurantTableViewController.swift in Sources */,
 				38B4AEC020887B7A00EFDAE4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B4AED520887B7B00EFDAE4 /* HonbabhanyangTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B4AEE020887B7B00EFDAE4 /* HonbabhanyangUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
