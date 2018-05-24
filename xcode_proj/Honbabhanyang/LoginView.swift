@@ -20,6 +20,8 @@ class LoginView: UIViewController {
         super.viewDidLoad()
         
         LoginButtonView.layer.cornerRadius = 4
+        
+        PasswordView.isSecureTextEntry = true
 
         if let user = Auth.auth().currentUser {
             
@@ -31,7 +33,7 @@ class LoginView: UIViewController {
             
     }
     
-    func loginButtonTouched(_ sender :Any){
+    @IBAction func loginButtonTouched(_ sender :Any){
         
         Auth.auth().signIn(withEmail: EmailView.text!, password : PasswordView.text!){
             
@@ -39,6 +41,7 @@ class LoginView: UIViewController {
             
             if user != nil{
                 print("로그인 성공")
+                
             }
             else {
                 print("로그인 실패")

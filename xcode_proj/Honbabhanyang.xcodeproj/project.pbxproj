@@ -19,12 +19,12 @@
 		FF19256D20B6936A00CE6F55 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19256C20B6936A00CE6F55 /* CategoryTableViewController.swift */; };
 		FF19256E20B6936A00CE6F55 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19256C20B6936A00CE6F55 /* CategoryTableViewController.swift */; };
 		FF19256F20B6936A00CE6F55 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19256C20B6936A00CE6F55 /* CategoryTableViewController.swift */; };
-		FF2C531720B3BFAB0007A90E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF2C531620B3BFAB0007A90E /* GoogleService-Info.plist */; };
-		FF2C531820B3BFAB0007A90E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF2C531620B3BFAB0007A90E /* GoogleService-Info.plist */; };
-		FF2C531920B3BFAB0007A90E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF2C531620B3BFAB0007A90E /* GoogleService-Info.plist */; };
 		FF6CAA2B20B6A1660056A8CA /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6CAA2A20B6A1660056A8CA /* JoinViewController.swift */; };
 		FF6CAA2C20B6A1660056A8CA /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6CAA2A20B6A1660056A8CA /* JoinViewController.swift */; };
 		FF6CAA2D20B6A1660056A8CA /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6CAA2A20B6A1660056A8CA /* JoinViewController.swift */; };
+		FF6CAA2F20B6B8310056A8CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF6CAA2E20B6B8310056A8CA /* GoogleService-Info.plist */; };
+		FF6CAA3020B6B8310056A8CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF6CAA2E20B6B8310056A8CA /* GoogleService-Info.plist */; };
+		FF6CAA3120B6B8310056A8CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF6CAA2E20B6B8310056A8CA /* GoogleService-Info.plist */; };
 		FFBF546320B3F50600151595 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF546220B3F50600151595 /* FirstView.swift */; };
 		FFBF546420B3F50600151595 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF546220B3F50600151595 /* FirstView.swift */; };
 		FFBF546520B3F50600151595 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF546220B3F50600151595 /* FirstView.swift */; };
@@ -77,8 +77,8 @@
 		DB25DC773D1ABDC39907D8F6 /* Pods-Honbabhanyang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Honbabhanyang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Honbabhanyang/Pods-Honbabhanyang.release.xcconfig"; sourceTree = "<group>"; };
 		DC965A489FDA0EEF7F633E0C /* Pods-HonbabhanyangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonbabhanyangUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HonbabhanyangUITests/Pods-HonbabhanyangUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF19256C20B6936A00CE6F55 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
-		FF2C531620B3BFAB0007A90E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF6CAA2A20B6A1660056A8CA /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		FF6CAA2E20B6B8310056A8CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFBF546220B3F50600151595 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		FFBF546620B3F9B600151595 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FFBF546A20B57BF200151595 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
@@ -136,6 +136,7 @@
 		38B4AEBE20887B7A00EFDAE4 /* Honbabhanyang */ = {
 			isa = PBXGroup;
 			children = (
+				FF6CAA2E20B6B8310056A8CA /* GoogleService-Info.plist */,
 				38B4AEBF20887B7A00EFDAE4 /* AppDelegate.swift */,
 				FFBF546220B3F50600151595 /* FirstView.swift */,
 				FFBF546620B3F9B600151595 /* LoginView.swift */,
@@ -149,7 +150,6 @@
 				38B4AEC320887B7A00EFDAE4 /* Main.storyboard */,
 				38B4AEC820887B7A00EFDAE4 /* LaunchScreen.storyboard */,
 				38B4AECB20887B7A00EFDAE4 /* Info.plist */,
-				FF2C531620B3BFAB0007A90E /* GoogleService-Info.plist */,
 			);
 			path = Honbabhanyang;
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 			files = (
 				38B4AECA20887B7A00EFDAE4 /* LaunchScreen.storyboard in Resources */,
 				FFBF547320B58F4700151595 /* Images.xcassets in Resources */,
-				FF2C531720B3BFAB0007A90E /* GoogleService-Info.plist in Resources */,
+				FF6CAA2F20B6B8310056A8CA /* GoogleService-Info.plist in Resources */,
 				38B4AEC520887B7A00EFDAE4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,8 +301,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2C531820B3BFAB0007A90E /* GoogleService-Info.plist in Resources */,
 				FFBF547420B58F4700151595 /* Images.xcassets in Resources */,
+				FF6CAA3020B6B8310056A8CA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2C531920B3BFAB0007A90E /* GoogleService-Info.plist in Resources */,
 				FFBF547520B58F4700151595 /* Images.xcassets in Resources */,
+				FF6CAA3120B6B8310056A8CA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

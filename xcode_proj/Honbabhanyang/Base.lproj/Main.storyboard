@@ -188,7 +188,6 @@
                                 </state>
                                 <connections>
                                     <action selector="LoginButtonPushed:" destination="BvU-gh-OjU" eventType="touchUpInside" id="WrO-TD-Dgr"/>
-                                    <segue destination="IpY-VH-mYb" kind="show" id="z3P-8k-Dif"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-QQ-laS">
