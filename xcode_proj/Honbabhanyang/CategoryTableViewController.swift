@@ -1,9 +1,9 @@
 //
-//  TableViewController.swift
+//  CategoryTableViewController.swift
 //  Honbabhanyang
 //
-//  Created by 최솔비 on 2018. 5. 24..
-//  Copyright © 2018년 hojun. All rights reserved.
+//  Created by hojun on 30/05/2018.
+//  Copyright © 2018 hojun. All rights reserved.
 //
 
 import UIKit

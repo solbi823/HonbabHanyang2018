@@ -1,19 +1,15 @@
 //
-//  MainMenuView.swift
+//  MainMenuViewController.swift
 //  Honbabhanyang
 //
-//  Created by 최솔비 on 2018. 5. 23..
-//  Copyright © 2018년 hojun. All rights reserved.
+//  Created by hojun on 30/05/2018.
+//  Copyright © 2018 hojun. All rights reserved.
 //
 
 import UIKit
 
-class MainMenuView: UITabBarController {
+class MainMenuViewController: UIViewController {
 
-    @IBOutlet weak var SearchByFoodButton : UIButton!
-    @IBOutlet weak var SearchByLocationButton: UIButton!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
