@@ -9,6 +9,9 @@
 import UIKit
 
 class CategoryTableViewController: UITableViewController {
+    
+    var byFood: Bool = false
+    var byLocation: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,23 +32,41 @@ class CategoryTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if byFood {
+            return Genre.count
+        } else if byLocation {
+            return Region.count
+        } else {
+            print("CategoryTableViewController : should not come here!")
+            return 0
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
 
         // Configure the cell...
+        if byFood {
+            if let enumValue = Genre(rawValue: indexPath.row) {
+                cell.textLabel?.text = "\(enumValue)"
+            }
+        } else if byLocation {
+            if let enumValue = Region(rawValue: indexPath.row) {
+                cell.textLabel?.text = "\(enumValue)"
+            }
+        } else {
+            print("CategoryTableViewController : should not come here!")
+        }
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,14 +103,19 @@ class CategoryTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? RestaurantTableViewController {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                vc.enumIndex = indexPath.row
+            }
+            vc.byFood = byFood
+            vc.byLocation = byLocation
+        }
     }
-    */
-
 }

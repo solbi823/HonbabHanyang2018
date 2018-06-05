@@ -32,7 +32,7 @@ class LoginView: UIViewController {
             LoginButtonView.setTitle("이미 로그인 된 상태입니다.", for: .normal)
             
     }
-    
+    /*
     @IBAction func loginButtonTouched(_ sender :Any){
         
         Auth.auth().signIn(withEmail: EmailView.text!, password : PasswordView.text!){
@@ -47,8 +47,7 @@ class LoginView: UIViewController {
                 print("로그인 실패")
             }
         }
-        
-    }
+    }*/
 
     func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

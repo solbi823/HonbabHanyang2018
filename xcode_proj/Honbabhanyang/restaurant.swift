@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+//import Firebase
 
 var partyNumber : Int = 0
 let restaurantData : RestaurantData = RestaurantData()
@@ -33,7 +33,7 @@ class RestaurantData {
         
         for res in restaurants{
             var party : Party = Party(menu: "Free To Choose", maxPeople: 2)
-            res.parties? += [party]
+            res.parties = [party]
         }
         
     }
@@ -81,15 +81,21 @@ class Party {
     }
 }
 
-enum Region {
+enum Region: Int {
     case 사근동
     case 왕십리
     case 왕십리엔터식스
     case 한양대엔터식스및근처
     case 상왕십리
+    
+    static let count: Int = {
+        var max: Int = 0
+        while let _ = Region(rawValue: max) { max += 1 }
+        return max
+    }()
 }
 
-enum Genre {
+enum Genre: Int {
     case 한식
     case 중국집
     case 치킨
@@ -99,6 +105,12 @@ enum Genre {
     case 고기
     case 패스트푸드
     case 세계음식
+    
+    static let count: Int = {
+        var max: Int = 0
+        while let _ = Genre(rawValue: max) { max += 1 }
+        return max
+    }()
 }
 
 func getRestaurant() -> [Restaurant] {

@@ -10,11 +10,27 @@ import UIKit
 
 class RestaurantTableViewController: UITableViewController {
     
-    var rests: [Restaurant] = getRestaurant()
-
+    var byFood: Bool = false
+    var byLocation: Bool = false
+    var enumIndex: Int = 0
+    var rests: [Restaurant] = []
+    var restData = RestaurantData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if byFood {
+            rests = restData.restaurants.filter {
+                $0.genre == Genre(rawValue: enumIndex)
+            }
+        } else if byLocation{
+            rests = restData.restaurants.filter {
+                $0.region == Region(rawValue: enumIndex)
+            }
+        } else {
+            print("RestaurantTableViewController : byFood byLocation both false")
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -41,10 +57,16 @@ class RestaurantTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as! RestaurantTableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = rests[indexPath.row].name
+        //cell.textLabel?.text = rests[indexPath.row].name
+        cell.restaurantName.text = rests[indexPath.row].name
+        if let p = rests[indexPath.row].parties {
+            cell.partyInfo.text = "\(p[0].currentPeople)/\(p[0].maxPeople)"
+        } else {
+            print("party not found?")
+        }
 
         return cell
     }
@@ -85,14 +107,17 @@ class RestaurantTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? RestaurantInfoViewController {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                vc.restaurant = rests[indexPath.row]
+            }
+        }
     }
-    */
-
 }
