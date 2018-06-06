@@ -18,6 +18,8 @@
 		38B4AEEE20887B9300EFDAE4 /* restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4AEED20887B9300EFDAE4 /* restaurant.swift */; };
 		38DD71FF20A4349D007075FB /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD71FE20A4349D007075FB /* RestaurantTableViewController.swift */; };
 		603FBEC014A7F1F9F81C0F18 /* Pods_HonbabhanyangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D8942F983719FCB26AECF4 /* Pods_HonbabhanyangTests.framework */; };
+		CD6DB25220C7C658004DAA56 /* PartyHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DB25120C7C658004DAA56 /* PartyHistoryTableViewController.swift */; };
+		CD6DB25420C7D024004DAA56 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DB25320C7D024004DAA56 /* HistoryDetailViewController.swift */; };
 		D188EC07B3E68167D45D6889 /* Pods_HonbabhanyangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C8DDBFE76F2A5A0E19F98 /* Pods_HonbabhanyangUITests.framework */; };
 		E2D6CF8DE8DA4F3F35DB6C9B /* Pods_Honbabhanyang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227769668F364BF84D1A56AB /* Pods_Honbabhanyang.framework */; };
 		FF6CAA2B20B6A1660056A8CA /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6CAA2A20B6A1660056A8CA /* JoinViewController.swift */; };
@@ -76,6 +78,8 @@
 		38DD71FE20A4349D007075FB /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		5B982D704EDC212CCC6026D8 /* Pods-HonbabhanyangTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonbabhanyangTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HonbabhanyangTests/Pods-HonbabhanyangTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65569793C7AF4BC8BBB98A5E /* Pods-HonbabhanyangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonbabhanyangTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HonbabhanyangTests/Pods-HonbabhanyangTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD6DB25120C7C658004DAA56 /* PartyHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyHistoryTableViewController.swift; sourceTree = "<group>"; };
+		CD6DB25320C7D024004DAA56 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		DB25DC773D1ABDC39907D8F6 /* Pods-Honbabhanyang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Honbabhanyang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Honbabhanyang/Pods-Honbabhanyang.release.xcconfig"; sourceTree = "<group>"; };
 		DC965A489FDA0EEF7F633E0C /* Pods-HonbabhanyangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonbabhanyangUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HonbabhanyangUITests/Pods-HonbabhanyangUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF6CAA2A20B6A1660056A8CA /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				38B4AECB20887B7A00EFDAE4 /* Info.plist */,
 				3852CFAF20BEDE2F00651F8A /* MainMenuViewController.swift */,
 				3852CFB120BEF3E700651F8A /* RestaurantInfoViewController.swift */,
+				CD6DB25320C7D024004DAA56 /* HistoryDetailViewController.swift */,
+				CD6DB25120C7C658004DAA56 /* PartyHistoryTableViewController.swift */,
 				38A068D220BFD7DA009C73DA /* RestaurantTableViewCell.swift */,
 			);
 			path = Honbabhanyang;
@@ -407,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6DB25420C7D024004DAA56 /* HistoryDetailViewController.swift in Sources */,
 				3852CFB020BEDE2F00651F8A /* MainMenuViewController.swift in Sources */,
 				FFBF546720B3F9B600151595 /* LoginView.swift in Sources */,
 				38B4AEEE20887B9300EFDAE4 /* restaurant.swift in Sources */,
@@ -416,6 +423,7 @@
 				3852CFB220BEF3E700651F8A /* RestaurantInfoViewController.swift in Sources */,
 				3852CFAC20BEBD0400651F8A /* CategoryTableViewController.swift in Sources */,
 				38B4AEC220887B7A00EFDAE4 /* ViewController.swift in Sources */,
+				CD6DB25220C7C658004DAA56 /* PartyHistoryTableViewController.swift in Sources */,
 				38DD71FF20A4349D007075FB /* RestaurantTableViewController.swift in Sources */,
 				38B4AEC020887B7A00EFDAE4 /* AppDelegate.swift in Sources */,
 			);
