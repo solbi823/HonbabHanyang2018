@@ -9,14 +9,23 @@
 import UIKit
 
 class HistoryDetailViewController: UIViewController {
-
-    
+    @IBOutlet weak var partyID: UILabel!
+    @IBOutlet weak var restaurantName: UILabel!
+    @IBOutlet weak var restaurantPhone: UILabel!
+    @IBOutlet weak var user: UILabel!
+    @IBOutlet weak var matchingTime: UILabel!
     
     var partyDetail : Party?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        partyID.text = "\(partyDetail!.partyID)"
+        /*                  추가해야할것들을을을으으으을드을을드륻르들
+        restaurantName.text =
+        restaurantPhone.text =
+        user.text =
+        matchingTime.text =
+         */
         // Do any additional setup after loading the view.
     }
 
