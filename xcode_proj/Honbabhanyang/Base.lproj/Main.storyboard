@@ -461,7 +461,7 @@
         <!--Setting Scene-->
         <scene sceneID="RS5-Wo-gBF">
             <objects>
-                <viewController id="KcC-bj-2F8" userLabel="Setting Scene" sceneMemberID="viewController">
+                <viewController id="KcC-bj-2F8" userLabel="Setting Scene" customClass="SettingViewController" customModule="Honbabhanyang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pu8-LM-OlR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -513,6 +513,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="logOut:" destination="KcC-bj-2F8" eventType="touchUpInside" id="TIm-9b-pj1"/>
                                     <action selector="report:" destination="Bre-LA-XWa" eventType="touchUpInside" id="Vcy-Z7-hlb"/>
                                 </connections>
                             </button>

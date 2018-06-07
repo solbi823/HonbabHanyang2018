@@ -20,6 +20,7 @@
 		603FBEC014A7F1F9F81C0F18 /* Pods_HonbabhanyangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D8942F983719FCB26AECF4 /* Pods_HonbabhanyangTests.framework */; };
 		CD6DB25220C7C658004DAA56 /* PartyHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DB25120C7C658004DAA56 /* PartyHistoryTableViewController.swift */; };
 		CD6DB25420C7D024004DAA56 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DB25320C7D024004DAA56 /* HistoryDetailViewController.swift */; };
+		CD6DB34820C8E3BA004DAA56 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DB34720C8E3BA004DAA56 /* SettingViewController.swift */; };
 		D188EC07B3E68167D45D6889 /* Pods_HonbabhanyangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C8DDBFE76F2A5A0E19F98 /* Pods_HonbabhanyangUITests.framework */; };
 		E2D6CF8DE8DA4F3F35DB6C9B /* Pods_Honbabhanyang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227769668F364BF84D1A56AB /* Pods_Honbabhanyang.framework */; };
 		FF6CAA2B20B6A1660056A8CA /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6CAA2A20B6A1660056A8CA /* JoinViewController.swift */; };
@@ -80,6 +81,7 @@
 		65569793C7AF4BC8BBB98A5E /* Pods-HonbabhanyangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonbabhanyangTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HonbabhanyangTests/Pods-HonbabhanyangTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD6DB25120C7C658004DAA56 /* PartyHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyHistoryTableViewController.swift; sourceTree = "<group>"; };
 		CD6DB25320C7D024004DAA56 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
+		CD6DB34720C8E3BA004DAA56 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DB25DC773D1ABDC39907D8F6 /* Pods-Honbabhanyang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Honbabhanyang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Honbabhanyang/Pods-Honbabhanyang.release.xcconfig"; sourceTree = "<group>"; };
 		DC965A489FDA0EEF7F633E0C /* Pods-HonbabhanyangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonbabhanyangUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HonbabhanyangUITests/Pods-HonbabhanyangUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF6CAA2A20B6A1660056A8CA /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				38B4AECB20887B7A00EFDAE4 /* Info.plist */,
 				3852CFAF20BEDE2F00651F8A /* MainMenuViewController.swift */,
 				3852CFB120BEF3E700651F8A /* RestaurantInfoViewController.swift */,
+				CD6DB34720C8E3BA004DAA56 /* SettingViewController.swift */,
 				CD6DB25320C7D024004DAA56 /* HistoryDetailViewController.swift */,
 				CD6DB25120C7C658004DAA56 /* PartyHistoryTableViewController.swift */,
 				38A068D220BFD7DA009C73DA /* RestaurantTableViewCell.swift */,
@@ -418,6 +421,7 @@
 				FFBF546720B3F9B600151595 /* LoginView.swift in Sources */,
 				38B4AEEE20887B9300EFDAE4 /* restaurant.swift in Sources */,
 				38A068D320BFD7DA009C73DA /* RestaurantTableViewCell.swift in Sources */,
+				CD6DB34820C8E3BA004DAA56 /* SettingViewController.swift in Sources */,
 				FF6CAA2B20B6A1660056A8CA /* JoinViewController.swift in Sources */,
 				FFBF546320B3F50600151595 /* FirstView.swift in Sources */,
 				3852CFB220BEF3E700651F8A /* RestaurantInfoViewController.swift in Sources */,
