@@ -35,7 +35,18 @@ class RestaurantInfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func partyButton(_ sender: Any) {
+        let alert = UIAlertController(title : "같이 먹을래", message : "20분 안에 올 수 있으시죠?", preferredStyle : UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title : "네", style: UIAlertActionStyle.default,handler :nil)
+        let cancelAction = UIAlertAction(title : "힘들 것 같아요", style: UIAlertActionStyle.default,handler :nil)
+        
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true , completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
