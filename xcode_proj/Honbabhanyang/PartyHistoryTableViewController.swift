@@ -10,7 +10,7 @@ import UIKit
 
 class PartyHistoryTableViewController: UITableViewController {
     
-    var history:[Party] = [Party(menu:"sample_alpha",maxPeople:2),Party(menu:"sample_beta",maxPeople:1)]
+    var history:[Party] = [Party(menu:"자연별곡",maxPeople:2),Party(menu:"악어떡볶이",maxPeople:1)]
     
     // var history:[String] = ["ddada","eagsfa"]
     

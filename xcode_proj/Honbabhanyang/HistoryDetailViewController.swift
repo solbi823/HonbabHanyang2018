@@ -16,16 +16,19 @@ class HistoryDetailViewController: UIViewController {
     @IBOutlet weak var matchingTime: UILabel!
     
     var partyDetail : Party?
+    let restaurantList:[Restaurant] = getRestaurant()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         partyID.text = "\(partyDetail!.partyID)"
-        /*                  추가해야할것들을을을으으으을드을을드륻르들
-        restaurantName.text =
-        restaurantPhone.text =
-        user.text =
-        matchingTime.text =
-         */
+        restaurantList.map({
+            if($0.name == partyDetail?.menu) {
+                restaurantName.text = $0.name
+                restaurantPhone.text = $0.phoneNumber
+                //user.text =
+                //matchingTime.text =
+            }
+        })
         // Do any additional setup after loading the view.
     }
 
