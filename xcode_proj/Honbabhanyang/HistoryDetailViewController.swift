@@ -15,13 +15,16 @@ class HistoryDetailViewController: UIViewController {
     @IBOutlet weak var user: UILabel!
     @IBOutlet weak var matchingTime: UILabel!
     
-    var partyDetail : Party?
+    //var partyDetail : Party?
+    var partyIDVC : Int?
     var partyDate : String? = ""
     let restaurantList:[Restaurant] = RestaurantData().restaurants
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        partyID.text = "\(partyDetail!.partyID)"
+        //partyID.text = "\(partyDetail!.partyID)"
+        partyID.text = "\(partyIDVC!)"
+        /*
         restaurantList.map({
             if($0.name == partyDetail?.menu) {
                 restaurantName.text = $0.name
@@ -29,7 +32,7 @@ class HistoryDetailViewController: UIViewController {
                 //user.text =
                 //matchingTime.text =
             }
-        })
+        })*/
         // Do any additional setup after loading the view.
     }
 
@@ -38,8 +41,6 @@ class HistoryDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func report(_ sender: Any) {
-    }
 
     /*
     // MARK: - Navigation

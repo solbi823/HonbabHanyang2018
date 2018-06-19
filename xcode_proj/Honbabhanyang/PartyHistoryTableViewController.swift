@@ -53,18 +53,21 @@ class PartyHistoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
         let selectedItem = history[indexPath.row]
-        cell.textLabel!.text = selectedItem.party?.menu
+        //cell.textLabel!.text = selectedItem.party!.menu
+        cell.textLabel!.text = selectedItem.menu
         cell.detailTextLabel!.text = selectedItem.date
         // Configure the cell...
         
         return cell
     }
     
-     
+    
      override func  prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if let indexPath = self.tableView.indexPathForSelectedRow,
      let vc = segue.destination as? HistoryDetailViewController {
-        vc.partyDetail = history[indexPath.row].party
+        //vc.partyDetail = history[indexPath.row].party
+        //vc.partyDetail = history[indexPath.row].party
+        vc.partyIDVC = history[indexPath.row].partyID
         vc.partyDate = history[indexPath.row].date
         }
      }

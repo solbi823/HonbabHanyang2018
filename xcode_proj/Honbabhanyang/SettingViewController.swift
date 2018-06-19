@@ -31,6 +31,9 @@ class SettingViewController: UIViewController {
         pushAlarmSwitch.isOn = setting.bool(forKey: "pushAlarm")
     }
     @IBAction func logOut(_ sender: Any) {
+        let forReset = Party(menu: "for reset", maxPeople: 0)
+        let data = HistoryCenter(_party: forReset)
+        data.reset()
     }
     /*
     // MARK: - Navigation
@@ -43,3 +46,23 @@ class SettingViewController: UIViewController {
     */
 
 }
+
+/* 1초 후 알람
+ override func viewDidLoad() {
+ super.viewDidLoad()
+ UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,], completionHandler: {didAllow,Error in })
+ // UNUserNotificationCenter.current().delegate = self as! UNUserNotificationCenterDelegate
+ // Do any additional setup after loading the view, typically from a nib.
+ }
+ 
+ @IBAction func makeButton(_ sender: Any) {
+ let alarmContent = UNMutableNotificationContent()
+ alarmContent.title = "혼밥하냥"
+ alarmContent.body = "매칭이 완료되었습니다! 지금 바로 확인!"
+ let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+ let request = UNNotificationRequest(identifier: "timerdone", content: alarmContent, trigger: trigger)
+ UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+ }
+ */
+ 
+ 

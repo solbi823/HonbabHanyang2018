@@ -138,35 +138,50 @@ class HistoryCenter {
     init(_party:Party) {
         if FileManager.default.fileExists(atPath: filePath) {
             if let unarchArray = NSKeyedUnarchiver.unarchiveObject(withFile:filePath) as? [saveParty] {
-                historyData += unarchArray
+                self.historyData += unarchArray
             }
         }
-        historyData += [saveParty(_party : _party)]
+        self.historyData += [saveParty(_party : _party)]
     }
-    
+    func reset() {
+        self.historyData = []
+        NSKeyedArchiver.archiveRootObject(self.historyData, toFile:self.filePath)
+    }
     func save() {
         NSKeyedArchiver.archiveRootObject(self.historyData, toFile:self.filePath)
     }
 }
 
 class saveParty : NSObject, NSCoding{
-    var party : Party?
+    //let party : Party?
     let date : String
+    let partyID: Int
+    let maxPeople :Int
+    let menu : String
     
     init (_party:Party) {
         let now = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.date = dateFormatter.string(from: now)
-        self.party = _party
+        self.partyID = _party.partyID
+        self.maxPeople = _party.maxPeople
+        self.menu = _party.menu
+        //self.party = _party
     }
     required init? (coder aDecoder: NSCoder) {
         self.date = aDecoder.decodeObject(forKey: "date") as! String
-        self.party = aDecoder.decodeObject(forKey: "party") as? Party
+        self.partyID = aDecoder.decodeInteger(forKey: "partyID")
+        self.maxPeople = aDecoder.decodeInteger(forKey: "maxPeople")
+        self.menu = aDecoder.decodeObject(forKey: "menu") as! String
+        //self.party = aDecoder.decodeObject(forKey: "party") as? Party
     }
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self.date, forKey: "date")
-        aCoder.encode(self.party, forKey: "party")
+        aCoder.encode(self.partyID, forKey: "partyID")
+        aCoder.encode(self.maxPeople, forKey: "maxPeople")
+        aCoder.encode(self.menu, forKey: "menu")
+        //aCoder.encode(self.party, forKey: "party")
     }
 }
 
