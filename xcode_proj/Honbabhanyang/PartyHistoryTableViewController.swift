@@ -10,16 +10,24 @@ import UIKit
 
 class PartyHistoryTableViewController: UITableViewController {
     
-    var history:[Party] = [Party(menu:"자연별곡",maxPeople:2),Party(menu:"악어떡볶이",maxPeople:1)]
-    
-    // var history:[String] = ["ddada","eagsfa"]
+    let fileName = "History.brch"
+    var filePath : String {
+        get {
+            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+            return documentDirectory + fileName
+        }
+    }
+    var history:[saveParty] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if FileManager.default.fileExists(atPath: filePath) {
+            if let unarchArray = NSKeyedUnarchiver.unarchiveObject(withFile:filePath) as? [saveParty] {
+                history = unarchArray
+            }
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -45,8 +53,8 @@ class PartyHistoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
         let selectedItem = history[indexPath.row]
-        cell.textLabel!.text = selectedItem.menu
-        cell.detailTextLabel!.text = "00000000" /////////////MatchingTime을 추가할 것
+        cell.textLabel!.text = selectedItem.party?.menu
+        cell.detailTextLabel!.text = selectedItem.date
         // Configure the cell...
         
         return cell
@@ -56,8 +64,9 @@ class PartyHistoryTableViewController: UITableViewController {
      override func  prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if let indexPath = self.tableView.indexPathForSelectedRow,
      let vc = segue.destination as? HistoryDetailViewController {
-     vc.partyDetail = history[indexPath.row]
-     }
+        vc.partyDetail = history[indexPath.row].party
+        vc.partyDate = history[indexPath.row].date
+        }
      }
     
     /*

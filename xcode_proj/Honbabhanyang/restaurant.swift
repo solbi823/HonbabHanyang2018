@@ -7,6 +7,7 @@
 //
 
 import Foundation
+let fileName = "History.brch"
 
 var partyNumber : Int = 0
 var currentlyInParty : Int = 0 // for checking if the user is already in a party 
@@ -117,6 +118,58 @@ enum Genre: Int {
         return nil
     }
 }
+
+
+// 아카이브 저장 - 매칭시 저장하도록
+/*
+ let data = HistoryCenter(_party: Party(menu: beta.text!, maxPeople: Int(alpha.text!)!))
+ data.save()
+ */
+
+class HistoryCenter {
+    var historyData:[saveParty] = []
+    var filePath : String {
+        get {
+            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+            return documentDirectory + fileName
+        }
+    }
+    
+    init(_party:Party) {
+        if FileManager.default.fileExists(atPath: filePath) {
+            if let unarchArray = NSKeyedUnarchiver.unarchiveObject(withFile:filePath) as? [saveParty] {
+                historyData += unarchArray
+            }
+        }
+        historyData += [saveParty(_party : _party)]
+    }
+    
+    func save() {
+        NSKeyedArchiver.archiveRootObject(self.historyData, toFile:self.filePath)
+    }
+}
+
+class saveParty : NSObject, NSCoding{
+    var party : Party?
+    let date : String
+    
+    init (_party:Party) {
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        self.date = dateFormatter.string(from: now)
+        self.party = _party
+    }
+    required init? (coder aDecoder: NSCoder) {
+        self.date = aDecoder.decodeObject(forKey: "date") as! String
+        self.party = aDecoder.decodeObject(forKey: "party") as? Party
+    }
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.date, forKey: "date")
+        aCoder.encode(self.party, forKey: "party")
+    }
+}
+
 
 /*func getRestaurant() -> [Restaurant] {
     return [

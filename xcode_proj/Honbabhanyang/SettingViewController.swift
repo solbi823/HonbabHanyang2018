@@ -10,13 +10,11 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
-    @IBOutlet weak var autoLoginSwitch: UISwitch!
     @IBOutlet weak var pushAlarmSwitch: UISwitch!
     let setting = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //autoLoginSwitch.isOn =
         pushAlarmSwitch.isOn = setting.bool(forKey: "pushAlarm")
         // Do any additional setup after loading the view.
     }
@@ -31,8 +29,6 @@ class SettingViewController: UIViewController {
         let isOn = !(setting.bool(forKey: "pushAlarm"))
         setting.set(isOn, forKey: "pushAlarm")
         pushAlarmSwitch.isOn = setting.bool(forKey: "pushAlarm")
-    }
-    @IBAction func autoLogin(_ sender: Any) {
     }
     @IBAction func logOut(_ sender: Any) {
     }

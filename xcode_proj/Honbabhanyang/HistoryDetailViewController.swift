@@ -16,6 +16,7 @@ class HistoryDetailViewController: UIViewController {
     @IBOutlet weak var matchingTime: UILabel!
     
     var partyDetail : Party?
+    var partyDate : String? = ""
     let restaurantList:[Restaurant] = RestaurantData().restaurants
     
     override func viewDidLoad() {
