@@ -30,8 +30,11 @@ class RestaurantTableViewController: UITableViewController {
             let RestaurantArray = dictionary["Restaurants"] as? [[String:Any]] ?? []
             
             // get all restaurant data
+            var index = 0
             for rest in RestaurantArray {
-                // get each class member from the JSON
+                // get each class member from JSON
+                let id = index
+                index += 1
                 let name = rest["name"] as? String ?? ""
                 guard let region = Region.enumFromString(string: rest["region"] as? String ?? "") else {
                     print("failed to get restaurant data : Region")
@@ -45,7 +48,7 @@ class RestaurantTableViewController: UITableViewController {
                 party.currentPeople = currentPeople
                 
                 // create new Restaurant class
-                let res = Restaurant.init(name: name, region: region, genre: genre, phoneNumber: phoneNumber)
+                let res = Restaurant.init(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber)
                 res.parties = [party]
                 
                 // append restaurant to the array of restaurants

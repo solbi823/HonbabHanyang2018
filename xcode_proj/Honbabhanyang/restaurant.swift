@@ -20,6 +20,7 @@ class RestaurantData {
 
 // Class for representing Restaurants and party for the restaurant
 class Restaurant {
+    let id : Int // id used for accesssing
     let name: String
     let region: Region
     let genre: Genre
@@ -27,7 +28,8 @@ class Restaurant {
     
     var parties: [Party]?
     
-    init(name: String, region: Region, genre :Genre, phoneNumber: String){
+    init(id: Int, name: String, region: Region, genre :Genre, phoneNumber: String){
+        self.id = id
         self.name = name
         self.region = region
         self.genre = genre
