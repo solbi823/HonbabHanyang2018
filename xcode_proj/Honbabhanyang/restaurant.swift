@@ -9,6 +9,7 @@
 import Foundation
 
 var partyNumber : Int = 0
+var currentlyInParty : Int = 0 // for checking if the user is already in a party 
 
 // Class for saving current restaurant data
 class RestaurantData {

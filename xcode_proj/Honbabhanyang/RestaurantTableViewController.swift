@@ -69,7 +69,9 @@ class RestaurantTableViewController: UITableViewController {
             }
             
             // reload data
-            self.restTableView.reloadData()
+            DispatchQueue.main.async {
+                self.restTableView.reloadData()
+            }
             
             // for refresh control
             if let refresh = self.refreshControl {
