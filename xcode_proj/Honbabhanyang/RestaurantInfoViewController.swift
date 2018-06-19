@@ -24,7 +24,7 @@ class RestaurantInfoViewController: UIViewController {
             name.text = rest.name
             region.text = "\(rest.region)"
             genre.text = "\(rest.genre)"
-            phoneNumber.text = rest.phoneNumber
+            phoneNumber.text = "\(rest.phoneNumber)"
         }
 
         // Do any additional setup after loading the view.

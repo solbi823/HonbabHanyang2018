@@ -18,6 +18,8 @@ class MainMenuViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // setup data
     }
     @IBAction func touchedFood(_ sender: Any) {
         byFood = true

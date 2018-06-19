@@ -7,35 +7,73 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class RestaurantTableViewController: UITableViewController {
     
-    var byFood: Bool = false
-    var byLocation: Bool = false
-    var enumIndex: Int = 0
-    var rests: [Restaurant] = []
-    var restData = RestaurantData()
+    var byFood: Bool = false // filter by Food
+    var byLocation: Bool = false // filter by Location
+    var enumIndex: Int = 0 // Genre/Region enum index for filtering
+    var rests: [Restaurant] = [] // filtered Restaurant objects : objects to be shown on the table
+    @IBOutlet var restTableView: UITableView! // current tableView : for reloading the table
+    
+    func loadData() {
+        let restData = RestaurantData()
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        // get realtime database
+        ref.observe(.value, with: { snapshot in
+            restData.restaurants = []
+            
+            let dictionary = snapshot.value as? [String: Any] ?? [:]
+            let RestaurantArray = dictionary["Restaurants"] as? [[String:Any]] ?? []
+            
+            // get all restaurant data
+            for rest in RestaurantArray {
+                // get each class member from the JSON
+                let name = rest["name"] as? String ?? ""
+                guard let region = Region.enumFromString(string: rest["region"] as? String ?? "") else {
+                    print("failed to get restaurant data : Region")
+                    return }
+                guard let genre = Genre.enumFromString(string: rest["genre"] as? String ?? "") else {
+                    print("failed to get restaurant data : Genre")
+                    return }
+                let phoneNumber = rest["phoneNumber"] as? String ?? ""
+                let currentPeople = rest["currentPeople"] as? Int ?? 0
+                let party : Party = Party(menu: "Free To Choose", maxPeople: 2)
+                party.currentPeople = currentPeople
+                
+                // create new Restaurant class
+                let res = Restaurant.init(name: name, region: region, genre: genre, phoneNumber: phoneNumber)
+                res.parties = [party]
+                
+                // append restaurant to the array of restaurants
+                restData.restaurants.append(res)
+            }
+            
+            // filter data
+            if self.byFood {
+                self.rests = restData.restaurants.filter {
+                    $0.genre == Genre(rawValue: self.enumIndex)
+                }
+            } else if self.byLocation{
+                self.rests = restData.restaurants.filter {
+                    $0.region == Region(rawValue: self.enumIndex)
+                }
+            } else {
+                print("RestaurantTableViewController : byFood byLocation both false")
+            }
+            
+            // reload data
+            self.restTableView.reloadData()
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if byFood {
-            rests = restData.restaurants.filter {
-                $0.genre == Genre(rawValue: enumIndex)
-            }
-        } else if byLocation{
-            rests = restData.restaurants.filter {
-                $0.region == Region(rawValue: enumIndex)
-            }
-        } else {
-            print("RestaurantTableViewController : byFood byLocation both false")
-        }
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
