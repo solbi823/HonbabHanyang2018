@@ -17,7 +17,7 @@ class RestaurantTableViewController: UITableViewController {
     var rests: [Restaurant] = [] // filtered Restaurant objects : objects to be shown on the table
     @IBOutlet var restTableView: UITableView! // current tableView : for reloading the table
     
-    func loadData() {
+    @objc func loadData() {
         let restData = RestaurantData()
         var ref: DatabaseReference!
         ref = Database.database().reference()
@@ -67,13 +67,24 @@ class RestaurantTableViewController: UITableViewController {
             
             // reload data
             self.restTableView.reloadData()
+            
+            // for refresh control
+            if let refresh = self.refreshControl {
+                refresh.endRefreshing()
+            }
         })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // load data from Firebase realtime DB
         loadData()
+        
+        // Add Refresh Control to Table View
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:  #selector(loadData), for: UIControlEvents.valueChanged)
+        self.refreshControl = refreshControl
     }
 
     override func didReceiveMemoryWarning() {
