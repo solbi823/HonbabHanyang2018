@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class MainMenuViewController: UIViewController {
 
@@ -19,7 +20,12 @@ class MainMenuViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        // setup data
+        // load the database in the MainMenuView to reduce startup overhead
+        let ref = Database.database().reference()
+        ref.observe(.value, with: { snapshot in
+            // do nothing
+        })
+        
     }
     @IBAction func touchedFood(_ sender: Any) {
         byFood = true
