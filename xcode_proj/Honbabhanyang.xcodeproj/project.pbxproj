@@ -457,7 +457,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/Users/solbi/Desktop/version2/Honbabhanyang/xcode_proj/Scripts/strip-frameworks.sh";
+			shellScript = "./Scripts/strip-frameworks.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
