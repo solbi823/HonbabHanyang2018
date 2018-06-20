@@ -38,6 +38,15 @@
 		FFBF547320B58F4700151595 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFBF547220B58F4700151595 /* Images.xcassets */; };
 		FFBF547420B58F4700151595 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFBF547220B58F4700151595 /* Images.xcassets */; };
 		FFBF547520B58F4700151595 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFBF547220B58F4700151595 /* Images.xcassets */; };
+		FFFF9A2920DA3F13009960D3 /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFF9A2820DA3F12009960D3 /* ApiGatewayMac.framework */; };
+		FFFF9A2A20DA3F13009960D3 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FFFF9A2820DA3F12009960D3 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FFFF9A2D20DA3F23009960D3 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFF9A2C20DA3F23009960D3 /* NMapViewerSDK.framework */; };
+		FFFF9A3520DA4646009960D3 /* naverMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF9A3420DA4646009960D3 /* naverMapViewController.swift */; };
+		FFFF9A3620DA4646009960D3 /* naverMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF9A3420DA4646009960D3 /* naverMapViewController.swift */; };
+		FFFF9A3720DA4646009960D3 /* naverMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF9A3420DA4646009960D3 /* naverMapViewController.swift */; };
+		FFFF9A3920DA47B4009960D3 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF9A3820DA47B4009960D3 /* NMapViewResources.swift */; };
+		FFFF9A3A20DA47B4009960D3 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF9A3820DA47B4009960D3 /* NMapViewResources.swift */; };
+		FFFF9A3B20DA47B4009960D3 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF9A3820DA47B4009960D3 /* NMapViewResources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +65,20 @@
 			remoteInfo = Honbabhanyang;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FFFF9A2B20DA3F13009960D3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FFFF9A2A20DA3F13009960D3 /* ApiGatewayMac.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0C6C8DDBFE76F2A5A0E19F98 /* Pods_HonbabhanyangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HonbabhanyangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +112,11 @@
 		FFBF546220B3F50600151595 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		FFBF546620B3F9B600151595 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FFBF547220B58F4700151595 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FFFF9A2820DA3F12009960D3 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApiGatewayMac.framework; sourceTree = "<group>"; };
+		FFFF9A2C20DA3F23009960D3 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = "../../../maps.ios-master/Frameworks/NMapViewerSDK.framework"; sourceTree = "<group>"; };
+		FFFF9A2F20DA4147009960D3 /* naverMapHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = naverMapHeader.h; sourceTree = "<group>"; };
+		FFFF9A3420DA4646009960D3 /* naverMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverMapViewController.swift; sourceTree = "<group>"; };
+		FFFF9A3820DA47B4009960D3 /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFF9A2D20DA3F23009960D3 /* NMapViewerSDK.framework in Frameworks */,
+				FFFF9A2920DA3F13009960D3 /* ApiGatewayMac.framework in Frameworks */,
 				E2D6CF8DE8DA4F3F35DB6C9B /* Pods_Honbabhanyang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +152,7 @@
 		38B4AEB320887B7A00EFDAE4 = {
 			isa = PBXGroup;
 			children = (
+				FFFF9A2820DA3F12009960D3 /* ApiGatewayMac.framework */,
 				38B4AEBE20887B7A00EFDAE4 /* Honbabhanyang */,
 				38B4AEBD20887B7A00EFDAE4 /* Products */,
 				FC21872E01B507F4744A5193 /* Pods */,
@@ -161,6 +192,9 @@
 				CD6DB25320C7D024004DAA56 /* HistoryDetailViewController.swift */,
 				CD6DB25120C7C658004DAA56 /* PartyHistoryTableViewController.swift */,
 				38A068D220BFD7DA009C73DA /* RestaurantTableViewCell.swift */,
+				FFFF9A2F20DA4147009960D3 /* naverMapHeader.h */,
+				FFFF9A3420DA4646009960D3 /* naverMapViewController.swift */,
+				FFFF9A3820DA47B4009960D3 /* NMapViewResources.swift */,
 			);
 			path = Honbabhanyang;
 			sourceTree = "<group>";
@@ -168,6 +202,7 @@
 		747DB463CA4F290751987248 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFFF9A2C20DA3F23009960D3 /* NMapViewerSDK.framework */,
 				227769668F364BF84D1A56AB /* Pods_Honbabhanyang.framework */,
 				30D8942F983719FCB26AECF4 /* Pods_HonbabhanyangTests.framework */,
 				0C6C8DDBFE76F2A5A0E19F98 /* Pods_HonbabhanyangUITests.framework */,
@@ -200,6 +235,8 @@
 				38B4AEB920887B7A00EFDAE4 /* Frameworks */,
 				38B4AEBA20887B7A00EFDAE4 /* Resources */,
 				5391E9088CD5CE87C4FCB9CE /* [CP] Embed Pods Frameworks */,
+				FFFF9A2B20DA3F13009960D3 /* Embed Frameworks */,
+				FFFF9A2E20DA407A009960D3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -409,6 +446,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FFFF9A2E20DA407A009960D3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/solbi/Desktop/maps.ios-master/Scripts/strip-frameworks.sh";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -418,7 +468,9 @@
 			files = (
 				CD6DB25420C7D024004DAA56 /* HistoryDetailViewController.swift in Sources */,
 				3852CFB020BEDE2F00651F8A /* MainMenuViewController.swift in Sources */,
+				FFFF9A3520DA4646009960D3 /* naverMapViewController.swift in Sources */,
 				FFBF546720B3F9B600151595 /* LoginView.swift in Sources */,
+				FFFF9A3920DA47B4009960D3 /* NMapViewResources.swift in Sources */,
 				38B4AEEE20887B9300EFDAE4 /* restaurant.swift in Sources */,
 				38A068D320BFD7DA009C73DA /* RestaurantTableViewCell.swift in Sources */,
 				CD6DB34820C8E3BA004DAA56 /* SettingViewController.swift in Sources */,
@@ -437,9 +489,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFF9A3620DA4646009960D3 /* naverMapViewController.swift in Sources */,
 				FFBF546820B3F9B600151595 /* LoginView.swift in Sources */,
 				FFBF546420B3F50600151595 /* FirstView.swift in Sources */,
 				FF6CAA2C20B6A1660056A8CA /* JoinViewController.swift in Sources */,
+				FFFF9A3A20DA47B4009960D3 /* NMapViewResources.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,9 +501,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFF9A3720DA4646009960D3 /* naverMapViewController.swift in Sources */,
 				FFBF546920B3F9B600151595 /* LoginView.swift in Sources */,
 				FFBF546520B3F50600151595 /* FirstView.swift in Sources */,
 				FF6CAA2D20B6A1660056A8CA /* JoinViewController.swift in Sources */,
+				FFFF9A3B20DA47B4009960D3 /* NMapViewResources.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,10 +661,62 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/../../../maps.ios-master/Frameworks\"",
+				);
 				INFOPLIST_FILE = Honbabhanyang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseMessaging\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"Protobuf\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hojun.Honbabhanyang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/solbi/Desktop/newProject/Honbabhanyang/xcode_proj/Honbabhanyang/naverMapHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -620,10 +728,62 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/../../../maps.ios-master/Frameworks\"",
+				);
 				INFOPLIST_FILE = Honbabhanyang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseMessaging\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"Protobuf\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hojun.Honbabhanyang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/solbi/Desktop/newProject/Honbabhanyang/xcode_proj/Honbabhanyang/naverMapHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
