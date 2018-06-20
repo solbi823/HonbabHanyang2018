@@ -63,6 +63,16 @@ class HistoryDetailViewController: UIViewController {
         if let UID = Auth.auth().currentUser?.uid {
             // compare with UID and get the different person's UID
             var reportUID: String = ""
+            if let user1 = vcuser1 {
+                if user1 != UID {
+                    reportUID = user1
+                }
+            }
+            if let user2 = vcuser2 {
+                if user2 != UID {
+                    reportUID = user2
+                }
+            }
             
             // get Firebase Realtime Database reference
             var ref: DatabaseReference!
