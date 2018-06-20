@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingViewController: UIViewController {
 
@@ -35,6 +36,21 @@ class SettingViewController: UIViewController {
         let data = HistoryCenter(_party: forReset)
         data.reset()
     }
+    
+    @IBAction func logout(_ sender: Any) {
+        
+        do{
+            try Auth.auth().signOut();
+            
+            // go to login stage
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "logInNavigationController") as! UINavigationController
+            self.present(newViewController, animated: true, completion: nil)
+        } catch let logoutError {
+            print(logoutError)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
