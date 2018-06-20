@@ -11,15 +11,11 @@ import UIKit
 class naverMapViewController: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDelegate{
 
     var mapView: NMapView?
-    
-    var restaurant: Restaurant?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let rest = restaurant{
-            
-        }
+
         mapView = NMapView(frame: self.view.frame)
         self.navigationController?.navigationBar.isTranslucent = false
         
