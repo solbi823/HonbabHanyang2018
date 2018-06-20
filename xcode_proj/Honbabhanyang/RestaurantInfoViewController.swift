@@ -74,6 +74,29 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
             
             smallMapView.addSubview(mapView)
         }
+        
+        
+        if let mapOverlayManager = mapView?.mapOverlayManager {
+            
+            // create POI data overlay
+            if let poiDataOverlay = mapOverlayManager.newPOIdataOverlay() {
+                
+                poiDataOverlay.initPOIdata(1)
+                
+                let poiItem = poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: resLocationN!, latitude: resLocationE!), title: "Touch & Drag to Move", type: UserPOIflagTypeDefault, iconIndex: 0, with: nil)
+
+                // hide right button on callout
+                poiItem?.hasRightCalloutAccessory = false
+                
+                poiDataOverlay.endPOIdata()
+                
+                // select item
+                poiDataOverlay.selectPOIitem(at: 0, moveToCenter: true)
+                
+                // show all POI data
+                poiDataOverlay.showAllPOIdata()
+            }
+        }
  
     }
     
@@ -322,35 +345,6 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
         // Pass the selected object to the new view controller.
     }
     */
-
-    /*
-    func addMarker() {
-        
-        if let mapOverlayManager = mapView?.mapOverlayManager {
-            
-            // create POI data overlay
-            if let poiDataOverlay = mapOverlayManager.newPOIdataOverlay() {
-                
-                poiDataOverlay.initPOIdata(1)
-                
-                let poiItem = poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: 126.979, latitude: 37.567), title: "Touch & Drag to Move", type: UserPOIflagTypeDefault, iconIndex: 0, with: nil)
-                
-                // set floating mode
-                poiItem?.setPOIflagMode(.touch)
-                
-                // hide right button on callout
-                poiItem?.hasRightCalloutAccessory = false
-                
-                poiDataOverlay.endPOIdata()
-                
-                // select item
-                poiDataOverlay.selectPOIitem(at: 0, moveToCenter: true)
-                
-                // show all POI data
-                poiDataOverlay.showAllPOIdata()
-            }
-        }
-    }*/
 
 
 
