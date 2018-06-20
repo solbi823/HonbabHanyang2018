@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import Firebase
 
 class RestaurantInfoViewController: UIViewController {
     
@@ -68,6 +69,7 @@ class RestaurantInfoViewController: UIViewController {
             if let rest = self.restaurant {
                 // modify value "currentPeople"
                 var currentPeople = RestaurantArray[rest.id]["currentPeople"] as? Int ?? -1
+                var wait1UID = RestaurantArray[rest.id]["wait1UID"] as? String ?? ""
                 
                 if currentPeople < 0 { // failed
                     // failed to get data
@@ -98,6 +100,11 @@ class RestaurantInfoViewController: UIViewController {
                     currentlyInParty = rest.id
                     print(currentlyInParty)
                     currentPeople += 1
+                    // set wait1
+                    if let UID = Auth.auth().currentUser?.uid {
+                        wait1UID = UID
+                    }
+                    
                     self.restaurant?.parties?[0].currentPeople = currentPeople
                     
                     // show success alert
@@ -110,6 +117,13 @@ class RestaurantInfoViewController: UIViewController {
                     currentlyInParty = -1
                     currentPeople -= 1
                     self.restaurant?.parties?[0].currentPeople = currentPeople
+                    
+                    // make history with wait1UID and wait2UID
+                    if let UID = Auth.auth().currentUser?.uid {
+                        // wait1UID
+                        let wait2UID = UID
+                        /////// create history with wait1UID and wait2UID /////////
+                    }
                     
                     // show success alert
                     let alert = UIAlertController(title : "참여 성공!", message : "매칭이 완료되었습니다! 20분 안에 오셔야해요!", preferredStyle : UIAlertControllerStyle.alert)

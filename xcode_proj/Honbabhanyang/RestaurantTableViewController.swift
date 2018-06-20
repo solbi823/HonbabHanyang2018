@@ -57,10 +57,13 @@ class RestaurantTableViewController: UITableViewController {
                 let currentPeople = rest["currentPeople"] as? Int ?? 0
                 let party : Party = Party(menu: "Free To Choose", maxPeople: 2)
                 party.currentPeople = currentPeople
+                let wait1 = rest["wait1UID"] as? String ?? ""
+                let wait2 = rest["wait2UID"] as? String ?? ""
                 
-                // alert user if party is created
+                // if my waiting party is created
                 if currentPeople == 0 && currentlyInParty == id{
                     self.alertUser()
+                    // use wait1 and wait2 to create history entry////////////////////////////////
                 }
                 
                 // create new Restaurant class
