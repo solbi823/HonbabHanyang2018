@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import Firebase
 
 class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOIdataOverlayDelegate {
     
@@ -100,6 +101,8 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
             if let rest = self.restaurant {
                 // modify value "currentPeople"
                 var currentPeople = RestaurantArray[rest.id]["currentPeople"] as? Int ?? -1
+                var wait1UID = RestaurantArray[rest.id]["wait1UID"] as? String ?? ""
+                var wait2UID = RestaurantArray[rest.id]["wait2UID"] as? String ?? ""
                 
                 if currentPeople < 0 { // failed
                     // failed to get data
@@ -128,8 +131,12 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
                 } else if currentPeople == 0 { // succeed
                     // wait for another person
                     currentlyInParty = rest.id
-                    print(currentlyInParty)
                     currentPeople += 1
+                    // set wait1
+                    if let UID = Auth.auth().currentUser?.uid {
+                        wait1UID = UID
+                    }
+                    
                     self.restaurant?.parties?[0].currentPeople = currentPeople
                     
                     // show success alert
@@ -143,14 +150,27 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
                     currentPeople -= 1
                     self.restaurant?.parties?[0].currentPeople = currentPeople
                     
+                    // make history with wait1UID and wait2UID
+                    if let UID = Auth.auth().currentUser?.uid {
+                        // wait1UID
+                        wait2UID = UID
+                        /////// create history with wait1UID and wait2UID /////////
+                    }
+                    
                     // show success alert
                     let alert = UIAlertController(title : "참여 성공!", message : "매칭이 완료되었습니다! 20분 안에 오셔야해요!", preferredStyle : UIAlertControllerStyle.alert)
                     let okAction = UIAlertAction(title : "확인", style: UIAlertActionStyle.default, handler: nil)
                     alert.addAction(okAction)
                     self.present(alert, animated: true , completion: nil)
+                    
+                    // save history entry 
+                    let data = HistoryCenter(rest: rest)
+                    data.save()
                 }
                 
                 // apply changes
+                RestaurantArray[rest.id]["wait1UID"] = wait1UID
+                RestaurantArray[rest.id]["wait2UID"] = wait2UID
                 RestaurantArray[rest.id]["currentPeople"] = currentPeople
                 dictionary["Restaurants"] = RestaurantArray
                 currentData.value = dictionary
@@ -248,7 +268,7 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
             return TransactionResult.success(withValue: currentData)
         }) { (error, committed, snapshot) in
             if let error = error {
-                print(error.localizedDescription)
+                print("transaction error : \(error.localizedDescription)")
             }
         }
         

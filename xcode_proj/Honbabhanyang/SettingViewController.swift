@@ -35,8 +35,7 @@ class SettingViewController: UIViewController {
         pushAlarmSwitch.isOn = setting.bool(forKey: "pushAlarm")
     }
     @IBAction func logOut(_ sender: Any) {
-        let forReset = Party(menu: "for reset", maxPeople: 0)
-        let data = HistoryCenter(_party: forReset)
+        let data = HistoryCenter()
         data.reset()
     }
     
