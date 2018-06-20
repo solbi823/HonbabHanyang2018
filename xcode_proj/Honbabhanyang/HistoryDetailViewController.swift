@@ -24,6 +24,8 @@ class HistoryDetailViewController: UIViewController {
     var vcrestPhone : String?
     var vcrestGenre : String?
     var vcrestRegion : String?
+    var vcuser1 : String?
+    var vcuser2 : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,8 @@ class HistoryDetailViewController: UIViewController {
         else {
             partyID.text = "Error 405"
         }
-        restaurantName.text = vcrestName
-        restaurantPhone.text = vcrestPhone
+        restaurantName.text = vcuser2
+        restaurantPhone.text = vcuser1
         matchingTime.text = vcpartyDate
         // Do any additional setup after loading the view.
     }
