@@ -717,7 +717,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hojun.Honbabhanyang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/solbi/Desktop/newProject/Honbabhanyang/xcode_proj/Honbabhanyang/naverMapHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = ./Honbabhanyang/naverMapHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -785,7 +785,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hojun.Honbabhanyang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/solbi/Desktop/newProject/Honbabhanyang/xcode_proj/Honbabhanyang/naverMapHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = ./Honbabhanyang/naverMapHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
