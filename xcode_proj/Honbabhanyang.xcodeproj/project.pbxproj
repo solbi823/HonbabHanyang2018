@@ -53,6 +53,7 @@
 		FFFF9A4A20DA68D9009960D3 /* NanumBarunpenB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF9A4620DA67F6009960D3 /* NanumBarunpenB.ttf */; };
 		FFFF9A4B20DA68DC009960D3 /* NanumBarunpenR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF9A4520DA67F6009960D3 /* NanumBarunpenR.ttf */; };
 		FFFF9A4C20DA68DD009960D3 /* NanumBarunpenR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF9A4520DA67F6009960D3 /* NanumBarunpenR.ttf */; };
+		FFFF9A5020DAC3EA009960D3 /* BMJUA_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF9A4F20DAC3E9009960D3 /* BMJUA_otf.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		FFFF9A3820DA47B4009960D3 /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 		FFFF9A4520DA67F6009960D3 /* NanumBarunpenR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunpenR.ttf; sourceTree = "<group>"; };
 		FFFF9A4620DA67F6009960D3 /* NanumBarunpenB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunpenB.ttf; sourceTree = "<group>"; };
+		FFFF9A4F20DAC3E9009960D3 /* BMJUA_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMJUA_otf.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		38B4AEB320887B7A00EFDAE4 = {
 			isa = PBXGroup;
 			children = (
+				FFFF9A4F20DAC3E9009960D3 /* BMJUA_otf.otf */,
 				FFFF9A4620DA67F6009960D3 /* NanumBarunpenB.ttf */,
 				FFFF9A4520DA67F6009960D3 /* NanumBarunpenR.ttf */,
 				FFFF9A2820DA3F12009960D3 /* ApiGatewayMac.framework */,
@@ -348,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFF9A5020DAC3EA009960D3 /* BMJUA_otf.otf in Resources */,
 				38B4AECA20887B7A00EFDAE4 /* LaunchScreen.storyboard in Resources */,
 				FFBF547320B58F4700151595 /* Images.xcassets in Resources */,
 				FFFF9A4820DA67F7009960D3 /* NanumBarunpenB.ttf in Resources */,
