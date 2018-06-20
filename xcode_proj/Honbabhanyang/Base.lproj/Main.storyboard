@@ -489,8 +489,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="El5-Kc-6Iq">
-                                <rect key="frame" x="58" y="533" width="260" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="El5-Kc-6Iq">
+                                <rect key="frame" x="58" y="557" width="260" height="48"/>
                                 <color key="backgroundColor" red="0.99105408029999997" green="0.2576013251" blue="0.23734313570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="mhf-5l-DGD"/>
@@ -503,21 +503,32 @@
                                     <action selector="reportUser:" destination="5a9-rF-cvm" eventType="touchUpInside" id="vQ3-Op-C4a"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="신고 사유" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giu-DE-MTE">
+                                <rect key="frame" x="58" y="487" width="260" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hCN-vO-hwh" firstAttribute="top" secondItem="ftk-Rl-B9y" secondAttribute="top" constant="154" id="2hb-gD-3wz"/>
+                            <constraint firstItem="El5-Kc-6Iq" firstAttribute="top" secondItem="giu-DE-MTE" secondAttribute="bottom" constant="40" id="4vB-rc-nue"/>
                             <constraint firstItem="JeC-KN-Btt" firstAttribute="top" secondItem="5KI-Rb-YlH" secondAttribute="bottom" constant="34" id="6n9-WL-91L"/>
                             <constraint firstItem="P3d-lo-ODN" firstAttribute="bottom" secondItem="El5-Kc-6Iq" secondAttribute="bottom" constant="62" id="8Dm-jf-QRF"/>
+                            <constraint firstItem="El5-Kc-6Iq" firstAttribute="centerX" secondItem="ftk-Rl-B9y" secondAttribute="centerX" id="OXi-a2-g45"/>
                             <constraint firstItem="BIe-6x-ftE" firstAttribute="top" secondItem="hCN-vO-hwh" secondAttribute="bottom" constant="34" id="Rh9-pN-oRO"/>
                             <constraint firstAttribute="bottom" secondItem="JeC-KN-Btt" secondAttribute="bottom" constant="303" id="X0R-jF-AKc"/>
                             <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="JeC-KN-Btt" secondAttribute="leading" id="XMf-Yr-WpL"/>
                             <constraint firstItem="El5-Kc-6Iq" firstAttribute="centerX" secondItem="ftk-Rl-B9y" secondAttribute="centerX" id="Z18-H7-iov"/>
                             <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="5KI-Rb-YlH" secondAttribute="leading" id="ZtA-FQ-yCB"/>
+                            <constraint firstItem="P3d-lo-ODN" firstAttribute="trailing" secondItem="giu-DE-MTE" secondAttribute="trailing" constant="57" id="e4X-nX-7PA"/>
                             <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="P3d-lo-ODN" secondAttribute="leading" constant="58" id="gqb-s9-JSl"/>
                             <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="hCN-vO-hwh" secondAttribute="leading" id="grY-GS-h4a"/>
                             <constraint firstItem="hCN-vO-hwh" firstAttribute="top" secondItem="udl-5r-b96" secondAttribute="bottom" constant="32" id="p1Z-6z-OZk"/>
+                            <constraint firstItem="giu-DE-MTE" firstAttribute="leading" secondItem="P3d-lo-ODN" secondAttribute="leading" constant="58" id="vJC-4T-Rof"/>
                             <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="udl-5r-b96" secondAttribute="leading" id="vcd-u6-A2c"/>
+                            <constraint firstItem="giu-DE-MTE" firstAttribute="centerX" secondItem="ftk-Rl-B9y" secondAttribute="centerX" id="yD9-Uw-Utn"/>
                             <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="BIe-6x-ftE" secondAttribute="leading" id="zDT-Bo-2vb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P3d-lo-ODN"/>
@@ -525,6 +536,7 @@
                     <connections>
                         <outlet property="matchingTime" destination="JeC-KN-Btt" id="fCZ-V9-2qb"/>
                         <outlet property="partyID" destination="udl-5r-b96" id="Jjl-su-VYp"/>
+                        <outlet property="reportReasonTextField" destination="giu-DE-MTE" id="bMW-1m-bI8"/>
                         <outlet property="restaurantName" destination="hCN-vO-hwh" id="lLk-B7-shT"/>
                         <outlet property="restaurantPhone" destination="BIe-6x-ftE" id="NXO-d5-ixP"/>
                         <outlet property="user" destination="5KI-Rb-YlH" id="PeZ-cg-AhZ"/>

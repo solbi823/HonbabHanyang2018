@@ -16,6 +16,7 @@ class HistoryDetailViewController: UIViewController {
     @IBOutlet weak var restaurantPhone: UILabel!
     @IBOutlet weak var user: UILabel!
     @IBOutlet weak var matchingTime: UILabel!
+    @IBOutlet weak var reportReasonTextField: UITextField!
     
     //var partyDetail : Party?
     var vcpartyDate : String?
@@ -61,8 +62,10 @@ class HistoryDetailViewController: UIViewController {
     
     @IBAction func reportUser(_ sender: Any) {
         if let UID = Auth.auth().currentUser?.uid {
-            // compare with UID and get the different person's UID
             var reportUID: String = ""
+            var reportReason: String = ""
+            
+            // compare with UID and get the different person's UID
             if let user1 = vcuser1 {
                 if user1 != UID {
                     reportUID = user1
@@ -73,6 +76,7 @@ class HistoryDetailViewController: UIViewController {
                     reportUID = user2
                 }
             }
+            reportReason = reportReasonTextField.text ?? ""
             
             // get Firebase Realtime Database reference
             var ref: DatabaseReference!
@@ -81,10 +85,10 @@ class HistoryDetailViewController: UIViewController {
             // transaction block
             ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
                 var dictionary = currentData.value as? [String : Any] ?? [:]
-                var reportArray = dictionary["Reports"] as? [String] ?? []
+                var reportArray = dictionary["Reports"] as? [[String:String]] ?? []
                 
                 // append report array
-                reportArray.append(reportUID)
+                reportArray.append([reportUID: reportReason])
                 
                 // apply change
                 dictionary["Reports"] = reportArray
@@ -98,5 +102,11 @@ class HistoryDetailViewController: UIViewController {
                 }
             }
         }
+        
+        // show done alert
+        let alert = UIAlertController(title : ":D", message : "신고가 접수되었습니다", preferredStyle : UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title : "확인", style: UIAlertActionStyle.default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true , completion: nil)
     }
 }

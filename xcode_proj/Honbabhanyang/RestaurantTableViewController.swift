@@ -120,6 +120,9 @@ class RestaurantTableViewController: UITableViewController {
             }
         }
         
+        // remove empty table entries
+        self.tableView.tableFooterView = UIView(frame: .zero)
+        
         // load data from Firebase realtime DB
         loadData()
         

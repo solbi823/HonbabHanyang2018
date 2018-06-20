@@ -16,6 +16,10 @@ class CategoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // remove empty table entries
+        self.tableView.tableFooterView = UIView(frame: .zero)
+        
+        // show title name 
         if byFood {
             self.title = "음식으로 찾기"
         } else {
