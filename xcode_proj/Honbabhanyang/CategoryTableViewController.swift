@@ -50,15 +50,18 @@ class CategoryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
+        
 
         // Configure the cell...
         if byFood {
             if let enumValue = Genre(rawValue: indexPath.row) {
                 cell.textLabel?.text = "\(enumValue)"
+                cell.textLabel?.font = UIFont(name:"NanumBarunpen", size:20)
             }
         } else if byLocation {
             if let enumValue = Region(rawValue: indexPath.row) {
                 cell.textLabel?.text = "\(enumValue)"
+                cell.textLabel?.font = UIFont(name:"NanumBarunpen", size:20)
             }
         } else {
             print("CategoryTableViewController : should not come here!")
