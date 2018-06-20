@@ -70,6 +70,7 @@ class RestaurantInfoViewController: UIViewController {
                 // modify value "currentPeople"
                 var currentPeople = RestaurantArray[rest.id]["currentPeople"] as? Int ?? -1
                 var wait1UID = RestaurantArray[rest.id]["wait1UID"] as? String ?? ""
+                var wait2UID = RestaurantArray[rest.id]["wait2UID"] as? String ?? ""
                 
                 if currentPeople < 0 { // failed
                     // failed to get data
@@ -98,7 +99,6 @@ class RestaurantInfoViewController: UIViewController {
                 } else if currentPeople == 0 { // succeed
                     // wait for another person
                     currentlyInParty = rest.id
-                    print(currentlyInParty)
                     currentPeople += 1
                     // set wait1
                     if let UID = Auth.auth().currentUser?.uid {
@@ -121,7 +121,7 @@ class RestaurantInfoViewController: UIViewController {
                     // make history with wait1UID and wait2UID
                     if let UID = Auth.auth().currentUser?.uid {
                         // wait1UID
-                        let wait2UID = UID
+                        wait2UID = UID
                         /////// create history with wait1UID and wait2UID /////////
                     }
                     
@@ -130,14 +130,15 @@ class RestaurantInfoViewController: UIViewController {
                     let okAction = UIAlertAction(title : "확인", style: UIAlertActionStyle.default, handler: nil)
                     alert.addAction(okAction)
                     self.present(alert, animated: true , completion: nil)
+                    
+                    // save history entry 
                     let data = HistoryCenter(rest: rest)
                     data.save()
-                    /*
-                     code for saving restaurant data
-                    */
                 }
                 
                 // apply changes
+                RestaurantArray[rest.id]["wait1UID"] = wait1UID
+                RestaurantArray[rest.id]["wait2UID"] = wait2UID
                 RestaurantArray[rest.id]["currentPeople"] = currentPeople
                 dictionary["Restaurants"] = RestaurantArray
                 currentData.value = dictionary
@@ -235,7 +236,7 @@ class RestaurantInfoViewController: UIViewController {
             return TransactionResult.success(withValue: currentData)
         }) { (error, committed, snapshot) in
             if let error = error {
-                print(error.localizedDescription)
+                print("transaction error : \(error.localizedDescription)")
             }
         }
         
