@@ -130,6 +130,11 @@ class RestaurantInfoViewController: UIViewController {
                     let okAction = UIAlertAction(title : "확인", style: UIAlertActionStyle.default, handler: nil)
                     alert.addAction(okAction)
                     self.present(alert, animated: true , completion: nil)
+                    let data = HistoryCenter(rest: rest)
+                    data.save()
+                    /*
+                     code for saving restaurant data
+                    */
                 }
                 
                 // apply changes

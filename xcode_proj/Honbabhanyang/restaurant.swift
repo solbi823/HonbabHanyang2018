@@ -134,14 +134,14 @@ class HistoryCenter {
             return documentDirectory + fileName
         }
     }
-    
-    init(_party:Party) {
+    init () {}
+    init(rest:Restaurant) {
         if FileManager.default.fileExists(atPath: filePath) {
             if let unarchArray = NSKeyedUnarchiver.unarchiveObject(withFile:filePath) as? [saveParty] {
                 self.historyData += unarchArray
             }
         }
-        self.historyData += [saveParty(_party : _party)]
+        self.historyData += [saveParty(rest : rest)]
     }
     func reset() {
         self.historyData = []
@@ -158,15 +158,31 @@ class saveParty : NSObject, NSCoding{
     let partyID: Int
     let maxPeople :Int
     let menu : String
+    let restName : String
+    let restPhone : String
+    let restGenre : String
+    let restRegion : String
     
-    init (_party:Party) {
+    init (rest:Restaurant) {
         let now = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.date = dateFormatter.string(from: now)
-        self.partyID = _party.partyID
-        self.maxPeople = _party.maxPeople
-        self.menu = _party.menu
+        if let party = rest.parties {
+            let selected = party[party.count - 1]
+            self.partyID = selected.partyID
+            self.maxPeople = selected.maxPeople
+            self.menu = selected.menu
+        }
+        else {
+            self.partyID = 0
+            self.maxPeople = 0
+            self.menu = ""
+        }
+        self.restName = rest.name
+        self.restPhone = rest.phoneNumber
+        self.restGenre = "\(rest.genre)"
+        self.restRegion = "\(rest.region)"
         //self.party = _party
     }
     required init? (coder aDecoder: NSCoder) {
@@ -174,6 +190,10 @@ class saveParty : NSObject, NSCoding{
         self.partyID = aDecoder.decodeInteger(forKey: "partyID")
         self.maxPeople = aDecoder.decodeInteger(forKey: "maxPeople")
         self.menu = aDecoder.decodeObject(forKey: "menu") as! String
+        self.restName = aDecoder.decodeObject(forKey: "restName") as! String
+        self.restPhone = aDecoder.decodeObject(forKey: "restPhone") as! String
+        self.restGenre = aDecoder.decodeObject(forKey: "restGenre") as! String
+        self.restRegion = aDecoder.decodeObject(forKey: "restRegion") as! String
         //self.party = aDecoder.decodeObject(forKey: "party") as? Party
     }
     func encode(with aCoder: NSCoder) {
@@ -181,6 +201,10 @@ class saveParty : NSObject, NSCoding{
         aCoder.encode(self.partyID, forKey: "partyID")
         aCoder.encode(self.maxPeople, forKey: "maxPeople")
         aCoder.encode(self.menu, forKey: "menu")
+        aCoder.encode(self.restName, forKey: "restName")
+        aCoder.encode(self.restPhone, forKey: "restPhone")
+        aCoder.encode(self.restGenre, forKey: "restGenre")
+        aCoder.encode(self.restRegion, forKey: "restRegion")
         //aCoder.encode(self.party, forKey: "party")
     }
 }

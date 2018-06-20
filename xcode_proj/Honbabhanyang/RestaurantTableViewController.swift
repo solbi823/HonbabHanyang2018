@@ -63,7 +63,14 @@ class RestaurantTableViewController: UITableViewController {
                 // if my waiting party is created
                 if currentPeople == 0 && currentlyInParty == id{
                     self.alertUser()
+
                     // use wait1 and wait2 to create history entry////////////////////////////////
+                    let data = HistoryCenter(rest: Restaurant(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber))
+                    data.save()
+                    /*
+                     code for saving restaurant Data
+ 
+                    */
                 }
                 
                 // create new Restaurant class
