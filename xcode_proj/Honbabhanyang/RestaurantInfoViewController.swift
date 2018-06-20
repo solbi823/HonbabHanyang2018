@@ -17,6 +17,7 @@ class RestaurantInfoViewController: UIViewController {
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var currentPartyInfo: UILabel!
     @IBOutlet weak var partyJoinButton: UIButton!
+
     
     var restaurant: Restaurant?
     
