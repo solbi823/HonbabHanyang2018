@@ -15,6 +15,12 @@ class CategoryTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if byFood {
+            self.title = "음식으로 찾기"
+        } else {
+            self.title = "동네로 찾기"
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

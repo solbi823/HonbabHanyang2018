@@ -109,6 +109,17 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // set title
+        if byFood {
+            if let t = Genre(rawValue: enumIndex){
+                self.title = "\(t)"
+            }
+        } else {
+            if let t = Region(rawValue: enumIndex){
+                self.title = "\(t)"
+            }
+        }
+        
         // load data from Firebase realtime DB
         loadData()
         
