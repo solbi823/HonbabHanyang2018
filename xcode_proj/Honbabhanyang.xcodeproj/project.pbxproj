@@ -47,6 +47,12 @@
 		FFFF9A3920DA47B4009960D3 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF9A3820DA47B4009960D3 /* NMapViewResources.swift */; };
 		FFFF9A3A20DA47B4009960D3 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF9A3820DA47B4009960D3 /* NMapViewResources.swift */; };
 		FFFF9A3B20DA47B4009960D3 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF9A3820DA47B4009960D3 /* NMapViewResources.swift */; };
+		FFFF9A4720DA67F7009960D3 /* NanumBarunpenR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF9A4520DA67F6009960D3 /* NanumBarunpenR.ttf */; };
+		FFFF9A4820DA67F7009960D3 /* NanumBarunpenB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF9A4620DA67F6009960D3 /* NanumBarunpenB.ttf */; };
+		FFFF9A4920DA68D8009960D3 /* NanumBarunpenB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF9A4620DA67F6009960D3 /* NanumBarunpenB.ttf */; };
+		FFFF9A4A20DA68D9009960D3 /* NanumBarunpenB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF9A4620DA67F6009960D3 /* NanumBarunpenB.ttf */; };
+		FFFF9A4B20DA68DC009960D3 /* NanumBarunpenR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF9A4520DA67F6009960D3 /* NanumBarunpenR.ttf */; };
+		FFFF9A4C20DA68DD009960D3 /* NanumBarunpenR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF9A4520DA67F6009960D3 /* NanumBarunpenR.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +123,8 @@
 		FFFF9A2F20DA4147009960D3 /* naverMapHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = naverMapHeader.h; sourceTree = "<group>"; };
 		FFFF9A3420DA4646009960D3 /* naverMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverMapViewController.swift; sourceTree = "<group>"; };
 		FFFF9A3820DA47B4009960D3 /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
+		FFFF9A4520DA67F6009960D3 /* NanumBarunpenR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunpenR.ttf; sourceTree = "<group>"; };
+		FFFF9A4620DA67F6009960D3 /* NanumBarunpenB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunpenB.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,8 @@
 		38B4AEB320887B7A00EFDAE4 = {
 			isa = PBXGroup;
 			children = (
+				FFFF9A4620DA67F6009960D3 /* NanumBarunpenB.ttf */,
+				FFFF9A4520DA67F6009960D3 /* NanumBarunpenR.ttf */,
 				FFFF9A2820DA3F12009960D3 /* ApiGatewayMac.framework */,
 				38B4AEBE20887B7A00EFDAE4 /* Honbabhanyang */,
 				38B4AEBD20887B7A00EFDAE4 /* Products */,
@@ -340,7 +350,9 @@
 			files = (
 				38B4AECA20887B7A00EFDAE4 /* LaunchScreen.storyboard in Resources */,
 				FFBF547320B58F4700151595 /* Images.xcassets in Resources */,
+				FFFF9A4820DA67F7009960D3 /* NanumBarunpenB.ttf in Resources */,
 				FF6CAA2F20B6B8310056A8CA /* GoogleService-Info.plist in Resources */,
+				FFFF9A4720DA67F7009960D3 /* NanumBarunpenR.ttf in Resources */,
 				38B4AEC520887B7A00EFDAE4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +363,8 @@
 			files = (
 				FFBF547420B58F4700151595 /* Images.xcassets in Resources */,
 				FF6CAA3020B6B8310056A8CA /* GoogleService-Info.plist in Resources */,
+				FFFF9A4B20DA68DC009960D3 /* NanumBarunpenR.ttf in Resources */,
+				FFFF9A4920DA68D8009960D3 /* NanumBarunpenB.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +374,8 @@
 			files = (
 				FFBF547520B58F4700151595 /* Images.xcassets in Resources */,
 				FF6CAA3120B6B8310056A8CA /* GoogleService-Info.plist in Resources */,
+				FFFF9A4C20DA68DD009960D3 /* NanumBarunpenR.ttf in Resources */,
+				FFFF9A4A20DA68D9009960D3 /* NanumBarunpenB.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
