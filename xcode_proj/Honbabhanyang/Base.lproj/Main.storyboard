@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="caZ-d0-6V3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="caZ-d0-6V3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -616,10 +616,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="설정" image="settings" selectedImage="settings" id="7BW-0b-LUc"/>
                     <connections>
-                        <outlet property="historyInitialize" destination="Spa-Oo-sao" id="lm6-XO-2ew"/>
-                        <outlet property="histroyInitialize" destination="Spa-Oo-sao" id="RFP-g6-McK"/>
-                        <outlet property="logout" destination="W8M-FN-fNn" id="FzP-2z-WQr"/>
-                        <outlet property="logoutButton" destination="W8M-FN-fNn" id="OoN-Kl-9aV"/>
                         <outlet property="pushAlarmSwitch" destination="6Qk-mA-duA" id="zc6-Lk-MwL"/>
                     </connections>
                 </viewController>
