@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="caZ-d0-6V3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="caZ-d0-6V3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -320,8 +320,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7a2-SQ-k4n">
-                                <rect key="frame" x="115" y="345" width="144" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-QQ-laS">
+                                <rect key="frame" x="145" y="399" width="86" height="30"/>
+                                <state key="normal" title="새 계정 만들기"/>
+                                <connections>
+                                    <segue destination="RzL-hm-8vM" kind="show" id="PJR-qe-9xX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7a2-SQ-k4n">
+                                <rect key="frame" x="111" y="345" width="154" height="46"/>
                                 <color key="backgroundColor" red="0.33725490200000002" green="0.38431372549999998" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="26"/>
                                 <state key="normal" title="로그인">
@@ -331,26 +338,20 @@
                                     <action selector="loginButtonTouched:" destination="7LP-wQ-hCK" eventType="touchUpInside" id="HPD-eL-Y0S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-QQ-laS">
-                                <rect key="frame" x="145" y="399" width="86" height="30"/>
-                                <state key="normal" title="새 계정 만들기"/>
-                                <connections>
-                                    <segue destination="RzL-hm-8vM" kind="show" id="PJR-qe-9xX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pXm-So-oUj" firstAttribute="centerX" secondItem="jkh-wc-vht" secondAttribute="centerX" id="7IZ-UE-XAX"/>
-                            <constraint firstItem="7a2-SQ-k4n" firstAttribute="centerX" secondItem="pXm-So-oUj" secondAttribute="centerX" id="I3I-Dt-Q10"/>
-                            <constraint firstItem="0mh-QQ-laS" firstAttribute="top" secondItem="7a2-SQ-k4n" secondAttribute="bottom" constant="8" symbolic="YES" id="Nc4-Ax-nNr"/>
+                            <constraint firstItem="7a2-SQ-k4n" firstAttribute="centerX" secondItem="0mh-QQ-laS" secondAttribute="centerX" id="Jwg-2e-tMW"/>
                             <constraint firstItem="G1b-a1-haa" firstAttribute="bottom" secondItem="0mh-QQ-laS" secondAttribute="bottom" constant="238" id="QB4-Im-ukC"/>
                             <constraint firstItem="pXm-So-oUj" firstAttribute="leading" secondItem="xto-gD-jmF" secondAttribute="leading" id="RV3-lW-V0v"/>
                             <constraint firstItem="pXm-So-oUj" firstAttribute="centerX" secondItem="0mh-QQ-laS" secondAttribute="centerX" id="VpA-Ah-90c"/>
                             <constraint firstItem="pXm-So-oUj" firstAttribute="top" secondItem="G1b-a1-haa" secondAttribute="top" constant="151" id="cA8-se-6Wh"/>
+                            <constraint firstItem="7a2-SQ-k4n" firstAttribute="leading" secondItem="G1b-a1-haa" secondAttribute="leading" constant="111" id="dcL-4r-PcA"/>
                             <constraint firstItem="xto-gD-jmF" firstAttribute="top" secondItem="pXm-So-oUj" secondAttribute="bottom" constant="22" id="hDS-9D-VjG"/>
                             <constraint firstItem="pXm-So-oUj" firstAttribute="leading" secondItem="G1b-a1-haa" secondAttribute="leading" constant="53" id="o1a-gt-0Yl"/>
                             <constraint firstItem="xto-gD-jmF" firstAttribute="centerX" secondItem="pXm-So-oUj" secondAttribute="centerX" id="qtb-vU-zCl"/>
+                            <constraint firstItem="0mh-QQ-laS" firstAttribute="top" secondItem="7a2-SQ-k4n" secondAttribute="bottom" constant="8" symbolic="YES" id="uPd-Ca-iB8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G1b-a1-haa"/>
                     </view>
@@ -458,47 +459,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="partyID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udl-5r-b96">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="partyID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udl-5r-b96">
                                 <rect key="frame" x="58" y="101" width="86" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="restaurantName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCN-vO-hwh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="restaurantName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCN-vO-hwh">
                                 <rect key="frame" x="58" y="154" width="135" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KI-Rb-YlH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KI-Rb-YlH">
                                 <rect key="frame" x="58" y="272" width="36" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="restaurantPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIe-6x-ftE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="restaurantPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIe-6x-ftE">
                                 <rect key="frame" x="58" y="217" width="138" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="matchingTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeC-KN-Btt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="matchingTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeC-KN-Btt">
                                 <rect key="frame" x="58" y="335" width="113" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="El5-Kc-6Iq">
-                                <rect key="frame" x="58" y="557" width="256" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="El5-Kc-6Iq">
+                                <rect key="frame" x="58" y="533" width="260" height="48"/>
                                 <color key="backgroundColor" red="0.99105408029999997" green="0.2576013251" blue="0.23734313570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="mhf-5l-DGD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="26"/>
-                                <state key="normal" title="신고">
+                                <state key="normal" title="신고하기">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -507,6 +505,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hCN-vO-hwh" firstAttribute="top" secondItem="ftk-Rl-B9y" secondAttribute="top" constant="154" id="2hb-gD-3wz"/>
+                            <constraint firstItem="JeC-KN-Btt" firstAttribute="top" secondItem="5KI-Rb-YlH" secondAttribute="bottom" constant="34" id="6n9-WL-91L"/>
+                            <constraint firstItem="P3d-lo-ODN" firstAttribute="bottom" secondItem="El5-Kc-6Iq" secondAttribute="bottom" constant="62" id="8Dm-jf-QRF"/>
+                            <constraint firstItem="BIe-6x-ftE" firstAttribute="top" secondItem="hCN-vO-hwh" secondAttribute="bottom" constant="34" id="Rh9-pN-oRO"/>
+                            <constraint firstAttribute="bottom" secondItem="JeC-KN-Btt" secondAttribute="bottom" constant="303" id="X0R-jF-AKc"/>
+                            <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="JeC-KN-Btt" secondAttribute="leading" id="XMf-Yr-WpL"/>
+                            <constraint firstItem="El5-Kc-6Iq" firstAttribute="centerX" secondItem="ftk-Rl-B9y" secondAttribute="centerX" id="Z18-H7-iov"/>
+                            <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="5KI-Rb-YlH" secondAttribute="leading" id="ZtA-FQ-yCB"/>
+                            <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="P3d-lo-ODN" secondAttribute="leading" constant="58" id="gqb-s9-JSl"/>
+                            <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="hCN-vO-hwh" secondAttribute="leading" id="grY-GS-h4a"/>
+                            <constraint firstItem="hCN-vO-hwh" firstAttribute="top" secondItem="udl-5r-b96" secondAttribute="bottom" constant="32" id="p1Z-6z-OZk"/>
+                            <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="udl-5r-b96" secondAttribute="leading" id="vcd-u6-A2c"/>
+                            <constraint firstItem="El5-Kc-6Iq" firstAttribute="leading" secondItem="BIe-6x-ftE" secondAttribute="leading" id="zDT-Bo-2vb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="P3d-lo-ODN"/>
                     </view>
                     <connections>
@@ -578,24 +591,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   푸시알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivt-kF-TJr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   푸시알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivt-kF-TJr">
                                 <rect key="frame" x="0.0" y="130" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Zxq-T2-78L"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRC-hw-SKK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRC-hw-SKK">
                                 <rect key="frame" x="16" y="107" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="21"/>
                                 <color key="textColor" red="0.75216564119999996" green="0.75216564119999996" blue="0.75216564119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spa-Oo-sao">
-                                <rect key="frame" x="59" y="522" width="256" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spa-Oo-sao">
+                                <rect key="frame" x="59" y="522" width="256" height="46"/>
                                 <color key="backgroundColor" red="0.99105408029999997" green="0.2576013251" blue="0.23734313570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="26"/>
                                 <state key="normal" title="히스토리 초기화">
@@ -606,17 +619,18 @@
                                     <action selector="report:" destination="Bre-LA-XWa" eventType="touchUpInside" id="Vcy-Z7-hlb"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Qk-mA-duA" userLabel="pushAlarm">
-                                <rect key="frame" x="310" y="145" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Qk-mA-duA" userLabel="pushAlarm">
+                                <rect key="frame" x="310" y="145" width="51" height="31"/>
                                 <connections>
                                     <action selector="pushAlarm:" destination="KcC-bj-2F8" eventType="valueChanged" id="z9S-N4-gsW"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8M-FN-fNn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8M-FN-fNn">
                                 <rect key="frame" x="59" y="455" width="256" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99105408029999997" green="0.2576013251" blue="0.23734313570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.31764705879999999" green="0.61568627450000002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="1Fi-bd-hCz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="26"/>
                                 <state key="normal" title="로그아웃">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -627,6 +641,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ivt-kF-TJr" firstAttribute="leading" secondItem="Pu8-LM-OlR" secondAttribute="leading" id="15E-tg-atK"/>
+                            <constraint firstItem="iUp-ib-eJp" firstAttribute="trailing" secondItem="FRC-hw-SKK" secondAttribute="trailing" constant="317" id="8mE-iQ-DoY"/>
+                            <constraint firstItem="Spa-Oo-sao" firstAttribute="top" secondItem="W8M-FN-fNn" secondAttribute="bottom" constant="19" id="8up-sp-tEu"/>
+                            <constraint firstItem="FRC-hw-SKK" firstAttribute="top" secondItem="iUp-ib-eJp" secondAttribute="top" constant="43" id="9WQ-pj-Ltk"/>
+                            <constraint firstItem="Ivt-kF-TJr" firstAttribute="top" secondItem="Pu8-LM-OlR" secondAttribute="top" constant="130" id="AHY-cx-XEI"/>
+                            <constraint firstItem="6Qk-mA-duA" firstAttribute="trailing" secondItem="Pu8-LM-OlR" secondAttribute="trailingMargin" id="OJn-d9-1MG"/>
+                            <constraint firstItem="Spa-Oo-sao" firstAttribute="centerX" secondItem="W8M-FN-fNn" secondAttribute="centerX" id="SMI-Yd-LZN"/>
+                            <constraint firstItem="W8M-FN-fNn" firstAttribute="leading" secondItem="Spa-Oo-sao" secondAttribute="leading" id="Ylt-77-eSe"/>
+                            <constraint firstItem="W8M-FN-fNn" firstAttribute="leading" secondItem="iUp-ib-eJp" secondAttribute="leading" constant="59" id="cCp-MT-kGa"/>
+                            <constraint firstItem="FRC-hw-SKK" firstAttribute="leading" secondItem="Pu8-LM-OlR" secondAttribute="leadingMargin" id="h9W-a3-8Tx"/>
+                            <constraint firstItem="Ivt-kF-TJr" firstAttribute="centerY" secondItem="6Qk-mA-duA" secondAttribute="centerY" id="jQS-z4-741"/>
+                            <constraint firstItem="W8M-FN-fNn" firstAttribute="centerX" secondItem="Ivt-kF-TJr" secondAttribute="centerX" id="mIV-v8-sjo"/>
+                            <constraint firstAttribute="bottom" secondItem="W8M-FN-fNn" secondAttribute="bottom" constant="164" id="nfr-l5-aQI"/>
+                            <constraint firstItem="W8M-FN-fNn" firstAttribute="centerX" secondItem="Pu8-LM-OlR" secondAttribute="centerX" id="p3b-dz-mFQ"/>
+                            <constraint firstItem="Ivt-kF-TJr" firstAttribute="top" secondItem="FRC-hw-SKK" secondAttribute="bottom" constant="2" id="tXA-cV-nGg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iUp-ib-eJp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="설정" image="settings" selectedImage="settings" id="7BW-0b-LUc"/>
