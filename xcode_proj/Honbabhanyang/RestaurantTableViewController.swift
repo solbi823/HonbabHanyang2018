@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import UserNotifications
 
 class RestaurantTableViewController: UITableViewController {
     
@@ -16,6 +17,16 @@ class RestaurantTableViewController: UITableViewController {
     var enumIndex: Int = 0 // Genre/Region enum index for filtering
     var rests: [Restaurant] = [] // filtered Restaurant objects : objects to be shown on the table
     @IBOutlet var restTableView: UITableView! // current tableView : for reloading the table
+    
+    // show notification
+    func alertUser() {
+        let alarmContent = UNMutableNotificationContent()
+        alarmContent.title = "혼밥하냥"
+        alarmContent.body = "매칭이 완료되었습니다! 지금 바로 확인!"
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let request = UNNotificationRequest(identifier: "timerdone", content: alarmContent, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
     
     @objc func loadData() {
         let restData = RestaurantData()
@@ -46,6 +57,11 @@ class RestaurantTableViewController: UITableViewController {
                 let currentPeople = rest["currentPeople"] as? Int ?? 0
                 let party : Party = Party(menu: "Free To Choose", maxPeople: 2)
                 party.currentPeople = currentPeople
+                
+                // alert user if party is created
+                if currentPeople == 0 && currentlyInParty == id{
+                    self.alertUser()
+                }
                 
                 // create new Restaurant class
                 let res = Restaurant.init(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber)
