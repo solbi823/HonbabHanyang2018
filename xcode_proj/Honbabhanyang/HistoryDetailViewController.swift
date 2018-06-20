@@ -16,23 +16,26 @@ class HistoryDetailViewController: UIViewController {
     @IBOutlet weak var matchingTime: UILabel!
     
     //var partyDetail : Party?
-    var partyIDVC : Int?
-    var partyDate : String? = ""
-    let restaurantList:[Restaurant] = RestaurantData().restaurants
+    var vcpartyDate : String?
+    var vcpartyID : Int?
+    var vcpartyMaxPeople : Int?
+    var vcpartyMenu : String?
+    var vcrestName : String?
+    var vcrestPhone : String?
+    var vcrestGenre : String?
+    var vcrestRegion : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //partyID.text = "\(partyDetail!.partyID)"
-        partyID.text = "\(partyIDVC!)"
-        /*
-        restaurantList.map({
-            if($0.name == partyDetail?.menu) {
-                restaurantName.text = $0.name
-                restaurantPhone.text = $0.phoneNumber
-                //user.text =
-                //matchingTime.text =
-            }
-        })*/
+        if let pID = vcpartyID {
+            partyID.text = "\(pID)"
+        }
+        else {
+            partyID.text = "Error 405"
+        }
+        restaurantName.text = vcrestName
+        restaurantPhone.text = vcrestPhone
+        matchingTime.text = vcpartyDate
         // Do any additional setup after loading the view.
     }
 

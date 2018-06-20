@@ -61,6 +61,12 @@ class RestaurantTableViewController: UITableViewController {
                 // alert user if party is created
                 if currentPeople == 0 && currentlyInParty == id{
                     self.alertUser()
+                    let data = HistoryCenter(rest: Restaurant(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber))
+                    data.save()
+                    /*
+                     code for saving restaurant Data
+ 
+                    */
                 }
                 
                 // create new Restaurant class

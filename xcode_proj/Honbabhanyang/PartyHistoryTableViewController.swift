@@ -54,7 +54,7 @@ class PartyHistoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
         let selectedItem = history[indexPath.row]
         //cell.textLabel!.text = selectedItem.party!.menu
-        cell.textLabel!.text = selectedItem.menu
+        cell.textLabel!.text = selectedItem.restName
         cell.detailTextLabel!.text = selectedItem.date
         // Configure the cell...
         
@@ -67,8 +67,15 @@ class PartyHistoryTableViewController: UITableViewController {
      let vc = segue.destination as? HistoryDetailViewController {
         //vc.partyDetail = history[indexPath.row].party
         //vc.partyDetail = history[indexPath.row].party
-        vc.partyIDVC = history[indexPath.row].partyID
-        vc.partyDate = history[indexPath.row].date
+        let selected = history[indexPath.row]
+        vc.vcpartyDate = selected.date
+        vc.vcpartyID = selected.partyID
+        vc.vcpartyMaxPeople = selected.maxPeople
+        vc.vcpartyMenu = selected.menu
+        vc.vcrestName = selected.restName
+        vc.vcrestPhone = selected.restPhone
+        vc.vcrestGenre = selected.restGenre
+        vc.vcrestRegion = selected.restRegion
         }
      }
     
