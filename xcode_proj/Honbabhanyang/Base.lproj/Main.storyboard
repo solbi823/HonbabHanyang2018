@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="caZ-d0-6V3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="caZ-d0-6V3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -130,7 +130,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UeT-xx-JJ7">
-                                <rect key="frame" x="182" y="141" width="193" height="150"/>
+                                <rect key="frame" x="155" y="141" width="193" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -153,28 +153,6 @@
             </objects>
             <point key="canvasLocation" x="5976.8000000000002" y="363.86806596701655"/>
         </scene>
-        <!--Naver Map View Controller-->
-        <scene sceneID="4we-fP-zhb">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7PA-X7-Hu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="iVh-vC-xza" customClass="naverMapViewController" customModule="Honbabhanyang" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uAG-2v-BMw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ycf-U1-G45">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="xsT-kg-fmv"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="6760.8000000000002" y="374.66266866566718"/>
-        </scene>
         <!--First View-->
         <scene sceneID="mJO-eO-Pyi">
             <objects>
@@ -183,10 +161,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="da8-mM-TD6">
-                                <rect key="frame" x="116" y="436" width="148" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ia1-e3-s2X">
+                                <rect key="frame" x="77" y="203" width="222" height="71.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="혼밥하냥?!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGd-7z-u9E">
+                                        <rect key="frame" x="0.0" y="0.0" width="222" height="71.5"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="56"/>
+                                        <color key="textColor" red="0.1802169205592008" green="0.34549515131062497" blue="0.50928378105163574" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="da8-mM-TD6">
+                                <rect key="frame" x="128" y="434" width="120" height="48"/>
                                 <color key="backgroundColor" red="0.64705882349999999" green="0.57647058819999997" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="pUu-E1-Hvs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="23"/>
                                 <state key="normal" title="계정 만들기">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -195,9 +186,8 @@
                                     <segue destination="RzL-hm-8vM" kind="show" id="iWq-6S-hxc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOh-f0-eo2">
-                                <rect key="frame" x="116" y="357" width="148" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOh-f0-eo2">
+                                <rect key="frame" x="128" y="359" width="119" height="46"/>
                                 <color key="backgroundColor" red="0.33725490200000002" green="0.38431372549999998" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="26"/>
                                 <state key="normal" title="로그인"/>
@@ -205,15 +195,19 @@
                                     <segue destination="7LP-wQ-hCK" kind="show" id="fMJ-OL-djL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="혼밥하냥?!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGd-7z-u9E">
-                                <rect key="frame" x="72" y="203" width="236" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="56"/>
-                                <color key="textColor" red="0.1802169205592008" green="0.34549515131062497" blue="0.50928378105163574" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="da8-mM-TD6" firstAttribute="top" secondItem="hOh-f0-eo2" secondAttribute="bottom" constant="29" id="2NT-4R-znr"/>
+                            <constraint firstItem="hOh-f0-eo2" firstAttribute="top" secondItem="Ia1-e3-s2X" secondAttribute="bottom" constant="86" id="2g7-Kk-8o8"/>
+                            <constraint firstItem="da8-mM-TD6" firstAttribute="centerX" secondItem="hOh-f0-eo2" secondAttribute="centerX" id="356-X5-Jsg"/>
+                            <constraint firstItem="Ia1-e3-s2X" firstAttribute="centerX" secondItem="da8-mM-TD6" secondAttribute="centerX" id="MHC-iu-DoN"/>
+                            <constraint firstItem="Ia1-e3-s2X" firstAttribute="top" secondItem="rpx-uI-dq4" secondAttribute="top" constant="139" id="Tea-gJ-cBa"/>
+                            <constraint firstItem="Ia1-e3-s2X" firstAttribute="centerX" secondItem="XiF-5R-Gax" secondAttribute="centerX" id="U35-ux-m8S"/>
+                            <constraint firstItem="da8-mM-TD6" firstAttribute="leading" secondItem="hOh-f0-eo2" secondAttribute="leading" id="oQC-iT-XfN"/>
+                            <constraint firstItem="da8-mM-TD6" firstAttribute="leading" secondItem="rpx-uI-dq4" secondAttribute="leading" constant="128" id="p9O-ju-u2V"/>
+                            <constraint firstItem="Ia1-e3-s2X" firstAttribute="centerX" secondItem="hOh-f0-eo2" secondAttribute="centerX" id="pm4-fN-vrK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rpx-uI-dq4"/>
                     </view>
                     <navigationItem key="navigationItem" id="4k8-ur-SPn"/>
@@ -296,26 +290,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXm-So-oUj">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXm-So-oUj">
                                 <rect key="frame" x="53" y="215" width="269" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.31764705879999999" green="0.61568627450000002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xto-gD-jmF">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xto-gD-jmF">
                                 <rect key="frame" x="53" y="267" width="269" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.31764705879999999" green="0.61568627450000002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.31764705879999999" green="0.61568627450000002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7a2-SQ-k4n">
-                                <rect key="frame" x="118" y="348" width="138" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7a2-SQ-k4n">
+                                <rect key="frame" x="145" y="345" width="86" height="46"/>
                                 <color key="backgroundColor" red="0.33725490200000002" green="0.38431372549999998" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="26"/>
                                 <state key="normal" title="로그인">
@@ -325,9 +316,8 @@
                                     <action selector="loginButtonTouched:" destination="7LP-wQ-hCK" eventType="touchUpInside" id="HPD-eL-Y0S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-QQ-laS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-QQ-laS">
                                 <rect key="frame" x="145" y="399" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="새 계정 만들기"/>
                                 <connections>
                                     <segue destination="RzL-hm-8vM" kind="show" id="PJR-qe-9xX"/>
@@ -335,6 +325,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pXm-So-oUj" firstAttribute="centerX" secondItem="jkh-wc-vht" secondAttribute="centerX" id="7IZ-UE-XAX"/>
+                            <constraint firstItem="7a2-SQ-k4n" firstAttribute="centerX" secondItem="pXm-So-oUj" secondAttribute="centerX" id="I3I-Dt-Q10"/>
+                            <constraint firstItem="0mh-QQ-laS" firstAttribute="top" secondItem="7a2-SQ-k4n" secondAttribute="bottom" constant="8" symbolic="YES" id="Nc4-Ax-nNr"/>
+                            <constraint firstItem="G1b-a1-haa" firstAttribute="bottom" secondItem="0mh-QQ-laS" secondAttribute="bottom" constant="238" id="QB4-Im-ukC"/>
+                            <constraint firstItem="pXm-So-oUj" firstAttribute="leading" secondItem="xto-gD-jmF" secondAttribute="leading" id="RV3-lW-V0v"/>
+                            <constraint firstItem="pXm-So-oUj" firstAttribute="centerX" secondItem="0mh-QQ-laS" secondAttribute="centerX" id="VpA-Ah-90c"/>
+                            <constraint firstItem="pXm-So-oUj" firstAttribute="top" secondItem="G1b-a1-haa" secondAttribute="top" constant="151" id="cA8-se-6Wh"/>
+                            <constraint firstItem="xto-gD-jmF" firstAttribute="top" secondItem="pXm-So-oUj" secondAttribute="bottom" constant="22" id="hDS-9D-VjG"/>
+                            <constraint firstItem="pXm-So-oUj" firstAttribute="leading" secondItem="G1b-a1-haa" secondAttribute="leading" constant="53" id="o1a-gt-0Yl"/>
+                            <constraint firstItem="xto-gD-jmF" firstAttribute="centerX" secondItem="pXm-So-oUj" secondAttribute="centerX" id="qtb-vU-zCl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="G1b-a1-haa"/>
                     </view>
                     <connections>
@@ -347,7 +349,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEH-nn-H93" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BvU-gh-OjU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1530" y="178"/>
+            <point key="canvasLocation" x="1528.8" y="177.66116941529236"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lcU-Dj-0VP">
@@ -680,6 +682,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="56l-9b-hkM"/>
-        <segue reference="iWq-6S-hxc"/>
+        <segue reference="PJR-qe-9xX"/>
     </inferredMetricsTieBreakers>
 </document>
