@@ -457,7 +457,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/Users/solbi/Desktop/maps.ios-master/Scripts/strip-frameworks.sh";
+			shellScript = "/Users/solbi/Desktop/version2/Honbabhanyang/xcode_proj/Scripts/strip-frameworks.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -665,6 +665,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"\"$(SRCROOT)/../../../maps.ios-master/Frameworks\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				INFOPLIST_FILE = Honbabhanyang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -732,6 +733,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"\"$(SRCROOT)/../../../maps.ios-master/Frameworks\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				INFOPLIST_FILE = Honbabhanyang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
