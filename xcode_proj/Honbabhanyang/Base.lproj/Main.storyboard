@@ -148,6 +148,7 @@
                     <connections>
                         <outlet property="currentPartyInfo" destination="anq-44-N7I" id="jnK-rM-o2R"/>
                         <outlet property="genre" destination="7Op-OS-ISc" id="uWh-hm-wEF"/>
+                        <outlet property="mapButton" destination="C1m-AC-EGE" id="Ivf-ZM-Ok0"/>
                         <outlet property="name" destination="YK2-XV-aYf" id="HmJ-Oc-G3M"/>
                         <outlet property="partyJoinButton" destination="Fca-il-8Ne" id="hRi-vm-Izs"/>
                         <outlet property="phoneNumber" destination="dFG-Fc-Yht" id="Azc-Jq-Ncg"/>
@@ -594,6 +595,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="설정" image="settings" selectedImage="settings" id="7BW-0b-LUc"/>
                     <connections>
+                        <outlet property="historyInitialize" destination="Spa-Oo-sao" id="lm6-XO-2ew"/>
+                        <outlet property="histroyInitialize" destination="Spa-Oo-sao" id="RFP-g6-McK"/>
+                        <outlet property="logout" destination="W8M-FN-fNn" id="FzP-2z-WQr"/>
+                        <outlet property="logoutButton" destination="W8M-FN-fNn" id="OoN-Kl-9aV"/>
                         <outlet property="pushAlarmSwitch" destination="6Qk-mA-duA" id="zc6-Lk-MwL"/>
                     </connections>
                 </viewController>

@@ -11,12 +11,19 @@ import Firebase
 
 class SettingViewController: UIViewController {
 
+
+    @IBOutlet weak var historyInitialize: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
+    
     @IBOutlet weak var pushAlarmSwitch: UISwitch!
     let setting = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pushAlarmSwitch.isOn = setting.bool(forKey: "pushAlarm")
+        
+        historyInitialize.layer.cornerRadius = 4
+        logoutButton.layer.cornerRadius = 4
         // Do any additional setup after loading the view.
     }
 

@@ -18,6 +18,7 @@ class RestaurantInfoViewController: UIViewController {
     @IBOutlet weak var currentPartyInfo: UILabel!
     @IBOutlet weak var partyJoinButton: UIButton!
 
+    @IBOutlet weak var mapButton: UIButton!
     
     var restaurant: Restaurant?
     
@@ -46,6 +47,8 @@ class RestaurantInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapButton.layer.cornerRadius = 4
+        partyJoinButton.layer.cornerRadius = 4
         
         setupInfo()
     }
