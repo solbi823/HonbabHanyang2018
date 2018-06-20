@@ -59,7 +59,7 @@ class HistoryDetailViewController: UIViewController {
     }
     */
     
-    func reportUser() {
+    @IBAction func reportUser(_ sender: Any) {
         if let UID = Auth.auth().currentUser?.uid {
             // compare with UID and get the different person's UID
             var reportUID: String = ""
@@ -99,5 +99,4 @@ class HistoryDetailViewController: UIViewController {
             }
         }
     }
-
 }
