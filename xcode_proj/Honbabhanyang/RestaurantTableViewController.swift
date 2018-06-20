@@ -65,6 +65,7 @@ class RestaurantTableViewController: UITableViewController {
                 // if my waiting party is created
                 if currentPeople == 0 && currentlyInParty == id{
                     self.alertUser()
+                    currentlyInParty = -1
 
                     // use wait1 and wait2 to create history entry////////////////////////////////
                     // create history data
