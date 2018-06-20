@@ -68,7 +68,7 @@ class RestaurantTableViewController: UITableViewController {
 
                     // use wait1 and wait2 to create history entry////////////////////////////////
                     // create history data
-                    let data = HistoryCenter(rest: Restaurant(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber, locationE : locationE, locationN: locationN))
+                    let data = HistoryCenter(rest: Restaurant(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber, locationE : locationE, locationN: locationN), user1ID: wait1UID, user2ID: wait2UID)
                     data.save()
                 }
                 
