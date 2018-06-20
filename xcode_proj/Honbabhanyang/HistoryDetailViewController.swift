@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import Firebase
 
 class HistoryDetailViewController: UIViewController {
     @IBOutlet weak var partyID: UILabel!
@@ -24,6 +26,8 @@ class HistoryDetailViewController: UIViewController {
     var vcrestPhone : String?
     var vcrestGenre : String?
     var vcrestRegion : String?
+    var vcuser1 : String?
+    var vcuser2 : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +37,8 @@ class HistoryDetailViewController: UIViewController {
         else {
             partyID.text = "Error 405"
         }
-        restaurantName.text = vcrestName
-        restaurantPhone.text = vcrestPhone
+        restaurantName.text = vcuser2
+        restaurantPhone.text = vcuser1
         matchingTime.text = vcpartyDate
         // Do any additional setup after loading the view.
     }
@@ -54,5 +58,36 @@ class HistoryDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func reportUser() {
+        if let UID = Auth.auth().currentUser?.uid {
+            // compare with UID and get the different person's UID
+            var reportUID: String = ""
+            
+            // get Firebase Realtime Database reference
+            var ref: DatabaseReference!
+            ref = Database.database().reference()
+            
+            // transaction block
+            ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+                var dictionary = currentData.value as? [String : Any] ?? [:]
+                var reportArray = dictionary["Reports"] as? [String] ?? []
+                
+                // append report array
+                reportArray.append(reportUID)
+                
+                // apply change
+                dictionary["Reports"] = reportArray
+                currentData.value = dictionary
+                
+                // finish transaction
+                return TransactionResult.success(withValue: currentData)
+            }) { (error, committed, snapshot) in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
 
 }
