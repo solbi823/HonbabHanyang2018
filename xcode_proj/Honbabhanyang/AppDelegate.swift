@@ -8,15 +8,34 @@
 
 import UIKit
 import Firebase
+import UserNotifications
+
+// enable push alarm
+extension AppDelegate : UNUserNotificationCenterDelegate{
+    //To display notifications when app is running  inforeground
+    
+    //앱이 foreground에 있을 때. 즉 앱안에 있어도 push알림을 받게 해줍니다.
+    //viewDidLoad()에 UNUserNotificationCenter.current().delegate = self를 추가해주는 것을 잊지마세요.
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound, .badge])
+    }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+        }
+        UNUserNotificationCenter.current().delegate = self
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()  //앱 시작할때 firebase 시작.
+        registerForPushNotifications()
         return true
     }
 

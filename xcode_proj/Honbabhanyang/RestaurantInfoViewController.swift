@@ -35,7 +35,7 @@ class RestaurantInfoViewController: UIViewController {
             }
         }
         // button
-        if currentlyInParty == 1 {
+        if currentlyInParty != -1 {
             partyJoinButton.setTitle("참여 취소", for: .normal)
             partyJoinButton.backgroundColor = UIColor(red: 209/255, green: 182/255, blue: 225/255, alpha: 1.0)
         } else {
@@ -98,7 +98,8 @@ class RestaurantInfoViewController: UIViewController {
                     return TransactionResult.abort()
                 } else if currentPeople == 0 { // succeed
                     // wait for another person
-                    currentlyInParty = 1
+                    currentlyInParty = rest.id
+                    print(currentlyInParty)
                     currentPeople += 1
                     self.restaurant?.parties?[0].currentPeople = currentPeople
                     
@@ -109,7 +110,7 @@ class RestaurantInfoViewController: UIViewController {
                     self.present(alert, animated: true , completion: nil)
                 } else if currentPeople == 1 { // succeed
                     // party created!
-                    currentlyInParty = 1
+                    currentlyInParty = -1
                     currentPeople -= 1
                     self.restaurant?.parties?[0].currentPeople = currentPeople
                     
@@ -191,8 +192,8 @@ class RestaurantInfoViewController: UIViewController {
                     return TransactionResult.abort()
                     
                 } else if currentPeople == 1 { // succeed
-                    // party created!
-                    currentlyInParty = 0
+                    // party removed
+                    currentlyInParty = -1
                     currentPeople -= 1
                     self.restaurant?.parties?[0].currentPeople = currentPeople
                     
@@ -230,7 +231,7 @@ class RestaurantInfoViewController: UIViewController {
     
     @IBAction func partyButton(_ sender: Any) {
         // show alert for joining a party
-        if currentlyInParty == 0 {
+        if currentlyInParty == -1 {
             let alert = UIAlertController(title : "같이 먹을래?", message : "20분 안에 올 수 있으시죠?", preferredStyle : UIAlertControllerStyle.alert)
             
             let okAction = UIAlertAction(title : "네", style: UIAlertActionStyle.default, handler: joinParty)
