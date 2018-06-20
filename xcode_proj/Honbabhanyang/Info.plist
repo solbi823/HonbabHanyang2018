@@ -6,6 +6,7 @@
 	<array>
 		<string>NanumBarunpenB.ttf</string>
 		<string>NanumBarunpenR.ttf</string>
+		<string>BMJUA_otf.otf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
