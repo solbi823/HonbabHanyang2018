@@ -14,7 +14,6 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var region: UILabel!
-    @IBOutlet weak var genre: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var currentPartyInfo: UILabel!
     @IBOutlet weak var partyJoinButton: UIButton!
@@ -31,11 +30,10 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
         // write texts on the View
         if let rest = restaurant {
             name.text = "\(rest.name)"
-            region.text = "동네 : \(rest.region)"
-            genre.text = "음식 종류 : \(rest.genre)"
-            phoneNumber.text = "전화 번호 : \(rest.phoneNumber)"
+            region.text = "\(rest.region)에 있어요."
+            phoneNumber.text = "PHONE \(rest.phoneNumber)"
             if let party = rest.parties {
-                currentPartyInfo.text = "현재 파티 인원 : \(party[0].currentPeople)/\(party[0].maxPeople)"
+                currentPartyInfo.text = "파티 현황 \(party[0].currentPeople)/\(party[0].maxPeople)"
             }
             
             resLocationE = rest.locationE
