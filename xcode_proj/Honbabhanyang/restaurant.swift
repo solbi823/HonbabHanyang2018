@@ -28,14 +28,20 @@ class Restaurant {
     let genre: Genre
     var phoneNumber: String
     
+    let locationE : Double
+    let locationN : Double
+    
     var parties: [Party]?
     
-    init(id: Int, name: String, region: Region, genre :Genre, phoneNumber: String){
+    init(id: Int, name: String, region: Region, genre :Genre, phoneNumber: String, locationE : Double, locationN: Double){
         self.id = id
         self.name = name
         self.region = region
         self.genre = genre
         self.phoneNumber = phoneNumber
+        
+        self.locationE = locationE
+        self.locationN = locationN
     }
 }
 
