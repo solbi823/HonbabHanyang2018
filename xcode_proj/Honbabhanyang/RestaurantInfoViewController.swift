@@ -25,10 +25,10 @@ class RestaurantInfoViewController: UIViewController {
     func setupInfo() {
         // write texts on the View
         if let rest = restaurant {
-            name.text = "이름 : \(rest.name)"
-            region.text = "지역 : \(rest.region)"
-            genre.text = "장르 : \(rest.genre)"
-            phoneNumber.text = "전화번호 : \(rest.phoneNumber)"
+            name.text = "\(rest.name)"
+            region.text = "동네 : \(rest.region)"
+            genre.text = "음식 종류 : \(rest.genre)"
+            phoneNumber.text = "전화 번호 : \(rest.phoneNumber)"
             if let party = rest.parties {
                 currentPartyInfo.text = "현재 파티 인원 : \(party[0].currentPeople)/\(party[0].maxPeople)"
             }
