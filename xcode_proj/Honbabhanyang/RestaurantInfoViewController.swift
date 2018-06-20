@@ -155,6 +155,8 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
                         // wait1UID
                         wait2UID = UID
                         /////// create history with wait1UID and wait2UID /////////
+                        let data = HistoryCenter(rest: rest, user1ID: wait1UID, user2ID: wait2UID)
+                        data.save()
                     }
                     
                     // show success alert
@@ -163,9 +165,7 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
                     alert.addAction(okAction)
                     self.present(alert, animated: true , completion: nil)
                     
-                    // save history entry 
-                    let data = HistoryCenter(rest: rest)
-                    data.save()
+                    // save history entry
                 }
                 
                 // apply changes

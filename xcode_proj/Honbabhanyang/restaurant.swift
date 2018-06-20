@@ -135,13 +135,13 @@ class HistoryCenter {
         }
     }
     init () {}
-    init(rest:Restaurant) {
+    init(rest:Restaurant, user1ID:String, user2ID:String) {
         if FileManager.default.fileExists(atPath: filePath) {
             if let unarchArray = NSKeyedUnarchiver.unarchiveObject(withFile:filePath) as? [saveParty] {
                 self.historyData += unarchArray
             }
         }
-        self.historyData += [saveParty(rest : rest)]
+        self.historyData += [saveParty(rest : rest, user1ID: user1ID, user2ID: user2ID)]
     }
     func reset() {
         self.historyData = []
@@ -162,8 +162,10 @@ class saveParty : NSObject, NSCoding{
     let restPhone : String
     let restGenre : String
     let restRegion : String
+    let user1 : String
+    let user2 : String
     
-    init (rest:Restaurant) {
+    init (rest:Restaurant, user1ID:String, user2ID:String) {
         let now = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -183,6 +185,8 @@ class saveParty : NSObject, NSCoding{
         self.restPhone = rest.phoneNumber
         self.restGenre = "\(rest.genre)"
         self.restRegion = "\(rest.region)"
+        self.user1 = user1ID
+        self.user2 = user2ID
         //self.party = _party
     }
     required init? (coder aDecoder: NSCoder) {
@@ -194,6 +198,8 @@ class saveParty : NSObject, NSCoding{
         self.restPhone = aDecoder.decodeObject(forKey: "restPhone") as! String
         self.restGenre = aDecoder.decodeObject(forKey: "restGenre") as! String
         self.restRegion = aDecoder.decodeObject(forKey: "restRegion") as! String
+        self.user1 = aDecoder.decodeObject(forKey: "user1") as! String
+        self.user2 = aDecoder.decodeObject(forKey: "user2") as! String
         //self.party = aDecoder.decodeObject(forKey: "party") as? Party
     }
     func encode(with aCoder: NSCoder) {
@@ -205,6 +211,8 @@ class saveParty : NSObject, NSCoding{
         aCoder.encode(self.restPhone, forKey: "restPhone")
         aCoder.encode(self.restGenre, forKey: "restGenre")
         aCoder.encode(self.restRegion, forKey: "restRegion")
+        aCoder.encode(self.user1, forKey: "user1")
+        aCoder.encode(self.user2, forKey: "user2")
         //aCoder.encode(self.party, forKey: "party")
     }
 }

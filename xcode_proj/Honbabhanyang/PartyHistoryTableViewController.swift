@@ -10,6 +10,7 @@ import UIKit
 
 class PartyHistoryTableViewController: UITableViewController {
     
+    var refresher : UIRefreshControl!
     let fileName = "History.brch"
     var filePath : String {
         get {
@@ -26,10 +27,23 @@ class PartyHistoryTableViewController: UITableViewController {
                 history = unarchArray
             }
         }
+        refresher = UIRefreshControl()
+        tableView.addSubview(refresher)
+        refresher.addTarget(self, action: #selector(refreshHandle), for: .valueChanged)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    @objc func refreshHandle() {
+        if FileManager.default.fileExists(atPath: filePath) {
+            if let unarchArray = NSKeyedUnarchiver.unarchiveObject(withFile:filePath) as? [saveParty] {
+                history = unarchArray
+            }
+        }
+        tableView.reloadData()
+        refresher.endRefreshing()
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,8 +90,11 @@ class PartyHistoryTableViewController: UITableViewController {
         vc.vcrestPhone = selected.restPhone
         vc.vcrestGenre = selected.restGenre
         vc.vcrestRegion = selected.restRegion
+        vc.vcuser1 = selected.user1
+        vc.vcuser2 = selected.user2
         }
      }
+    
     
     /*
      // Override to support conditional editing of the table view.
