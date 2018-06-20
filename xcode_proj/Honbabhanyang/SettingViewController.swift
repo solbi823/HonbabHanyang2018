@@ -11,12 +11,15 @@ import Firebase
 
 class SettingViewController: UIViewController {
 
+
+    
     @IBOutlet weak var pushAlarmSwitch: UISwitch!
     let setting = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pushAlarmSwitch.isOn = setting.bool(forKey: "pushAlarm")
+
         // Do any additional setup after loading the view.
     }
 
