@@ -322,7 +322,7 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
         // Pass the selected object to the new view controller.
     }
     */
-    
+    /*
     func addMarker() {
         
         if let mapOverlayManager = mapView?.mapOverlayManager {
@@ -349,7 +349,7 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
                 poiDataOverlay.showAllPOIdata()
             }
         }
-    }
+    }*/
 
 
     
