@@ -196,16 +196,16 @@ class saveParty : NSObject, NSCoding{
         //self.party = _party
     }
     required init? (coder aDecoder: NSCoder) {
-        self.date = aDecoder.decodeObject(forKey: "date") as! String
+        self.date = aDecoder.decodeObject(forKey: "date") as? String ?? ""
         self.partyID = aDecoder.decodeInteger(forKey: "partyID")
         self.maxPeople = aDecoder.decodeInteger(forKey: "maxPeople")
-        self.menu = aDecoder.decodeObject(forKey: "menu") as! String
-        self.restName = aDecoder.decodeObject(forKey: "restName") as! String
-        self.restPhone = aDecoder.decodeObject(forKey: "restPhone") as! String
-        self.restGenre = aDecoder.decodeObject(forKey: "restGenre") as! String
-        self.restRegion = aDecoder.decodeObject(forKey: "restRegion") as! String
-        self.user1 = aDecoder.decodeObject(forKey: "user1") as! String
-        self.user2 = aDecoder.decodeObject(forKey: "user2") as! String
+        self.menu = aDecoder.decodeObject(forKey: "menu") as? String ?? ""
+        self.restName = aDecoder.decodeObject(forKey: "restName") as? String ?? ""
+        self.restPhone = aDecoder.decodeObject(forKey: "restPhone") as? String ?? ""
+        self.restGenre = aDecoder.decodeObject(forKey: "restGenre") as? String ?? ""
+        self.restRegion = aDecoder.decodeObject(forKey: "restRegion") as? String ?? ""
+        self.user1 = aDecoder.decodeObject(forKey: "user1") as? String ?? ""
+        self.user2 = aDecoder.decodeObject(forKey: "user2") as? String ?? ""
         //self.party = aDecoder.decodeObject(forKey: "party") as? Party
     }
     func encode(with aCoder: NSCoder) {
