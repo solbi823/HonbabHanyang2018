@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
+
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -80,47 +81,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK2-XV-aYf">
-                                <rect key="frame" x="26" y="138" width="238" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK2-XV-aYf">
+                                <rect key="frame" x="26" y="94" width="238" height="37"/>
+                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="phonenumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFG-Fc-Yht">
+                                <rect key="frame" x="26" y="409" width="254" height="41"/>
+                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="current party info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anq-44-N7I">
+                                <rect key="frame" x="27" y="445.5" width="237" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FIH-eq-nus"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fca-il-8Ne">
+                                <rect key="frame" x="85" y="510.5" width="204" height="56.5"/>
+                                <color key="backgroundColor" red="0.31764705879999999" green="0.61568627450000002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="genre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Op-OS-ISc">
-                                <rect key="frame" x="26" y="263" width="160" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="phonenumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFG-Fc-Yht">
-                                <rect key="frame" x="26" y="327" width="254" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="region" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuQ-t7-2tu">
-                                <rect key="frame" x="26" y="199" width="255" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="current party info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anq-44-N7I">
-                                <rect key="frame" x="26" y="393" width="237" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fca-il-8Ne">
-                                <rect key="frame" x="118" y="491" width="139" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.31919816136360168" green="0.61445510387420654" blue="0.61774986982345581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="25"/>
-                                <state key="normal" title="파티에 참석">
+                                <state key="normal" title="파티에 참석하기">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -129,18 +115,47 @@
                                     <action selector="partyButton:" destination="bvy-GS-TIb" eventType="touchUpInside" id="N1B-rM-9mR"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UeT-xx-JJ7">
-                                <rect key="frame" x="155" y="141" width="193" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeT-xx-JJ7">
+                                <rect key="frame" x="16" y="151" width="343" height="179"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="region" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuQ-t7-2tu">
+                                <rect key="frame" x="26" y="352" width="311" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="WIx-Dh-XmG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fca-il-8Ne" firstAttribute="leading" secondItem="yXo-2A-PPD" secondAttribute="leading" constant="85" id="6Su-5G-mmK"/>
+                            <constraint firstItem="UeT-xx-JJ7" firstAttribute="top" secondItem="YK2-XV-aYf" secondAttribute="bottom" constant="20" id="FTo-f0-Fd6"/>
+                            <constraint firstItem="Fca-il-8Ne" firstAttribute="centerX" secondItem="UeT-xx-JJ7" secondAttribute="centerX" id="Hjd-5H-fpS"/>
+                            <constraint firstItem="Fca-il-8Ne" firstAttribute="top" secondItem="anq-44-N7I" secondAttribute="bottom" constant="25" id="Jgk-pp-EMZ"/>
+                            <constraint firstItem="AuQ-t7-2tu" firstAttribute="leading" secondItem="YK2-XV-aYf" secondAttribute="leading" id="KzB-h5-J6z"/>
+                            <constraint firstAttribute="bottom" secondItem="UeT-xx-JJ7" secondAttribute="bottom" constant="337" id="MJc-oW-kmt"/>
+                            <constraint firstItem="Fca-il-8Ne" firstAttribute="centerX" secondItem="UeT-xx-JJ7" secondAttribute="centerX" id="NGM-6H-f6o"/>
+                            <constraint firstItem="UeT-xx-JJ7" firstAttribute="leading" secondItem="6NK-AJ-kUZ" secondAttribute="leadingMargin" id="R7U-4o-mHB"/>
+                            <constraint firstItem="dFG-Fc-Yht" firstAttribute="top" secondItem="AuQ-t7-2tu" secondAttribute="bottom" constant="8" symbolic="YES" id="W7N-Ot-FU7"/>
+                            <constraint firstItem="anq-44-N7I" firstAttribute="top" secondItem="dFG-Fc-Yht" secondAttribute="bottom" constant="8" symbolic="YES" id="cbq-dU-RRp"/>
+                            <constraint firstItem="yXo-2A-PPD" firstAttribute="trailing" secondItem="anq-44-N7I" secondAttribute="trailing" constant="111" id="frb-Vw-uN3"/>
+                            <constraint firstItem="AuQ-t7-2tu" firstAttribute="leading" secondItem="dFG-Fc-Yht" secondAttribute="leading" id="jQe-OT-XDJ"/>
+                            <constraint firstItem="yXo-2A-PPD" firstAttribute="trailing" secondItem="AuQ-t7-2tu" secondAttribute="trailing" constant="38" id="knQ-Mh-5M9"/>
+                            <constraint firstItem="AuQ-t7-2tu" firstAttribute="top" secondItem="UeT-xx-JJ7" secondAttribute="bottom" constant="22" id="u6o-4L-SaI"/>
+                            <constraint firstItem="anq-44-N7I" firstAttribute="leading" secondItem="yXo-2A-PPD" secondAttribute="leading" constant="27" id="uJi-uj-D64"/>
+                            <constraint firstItem="anq-44-N7I" firstAttribute="centerX" secondItem="YK2-XV-aYf" secondAttribute="centerX" id="vuZ-bd-DW1"/>
+                            <constraint firstItem="yXo-2A-PPD" firstAttribute="bottom" secondItem="Fca-il-8Ne" secondAttribute="bottom" constant="100" id="yBG-xh-rlM"/>
+                            <constraint firstItem="anq-44-N7I" firstAttribute="trailing" secondItem="YK2-XV-aYf" secondAttribute="trailing" id="zBT-Sq-lao"/>
+                            <constraint firstItem="Fca-il-8Ne" firstAttribute="centerX" secondItem="6NK-AJ-kUZ" secondAttribute="centerX" id="zEk-8Z-WSN"/>
+                            <constraint firstItem="UeT-xx-JJ7" firstAttribute="top" secondItem="6NK-AJ-kUZ" secondAttribute="top" constant="151" id="zVw-DH-DjJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yXo-2A-PPD"/>
                     </view>
                     <connections>
                         <outlet property="currentPartyInfo" destination="anq-44-N7I" id="jnK-rM-o2R"/>
-                        <outlet property="genre" destination="7Op-OS-ISc" id="uWh-hm-wEF"/>
                         <outlet property="name" destination="YK2-XV-aYf" id="HmJ-Oc-G3M"/>
                         <outlet property="partyJoinButton" destination="Fca-il-8Ne" id="hRi-vm-Izs"/>
                         <outlet property="phoneNumber" destination="dFG-Fc-Yht" id="Azc-Jq-Ncg"/>
