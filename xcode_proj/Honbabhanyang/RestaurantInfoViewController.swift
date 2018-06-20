@@ -23,6 +23,9 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
     
     var restaurant: Restaurant?
     
+    var resLocationE : Double?
+    var resLocationN : Double?
+    
     // setup information to the view
     func setupInfo() {
         // write texts on the View
@@ -34,6 +37,9 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
             if let party = rest.parties {
                 currentPartyInfo.text = "현재 파티 인원 : \(party[0].currentPeople)/\(party[0].maxPeople)"
             }
+            
+            resLocationE = rest.locationE
+            resLocationN = rest.locationN
         }
         // button
         if currentlyInParty != -1 {
@@ -49,6 +55,8 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
     override func viewDidLoad() {
         super.viewDidLoad()
         partyJoinButton.layer.cornerRadius = 4
+        
+        setupInfo()
         
         var mapView: NMapView?
         mapView = NMapView(frame: smallMapView.frame)
@@ -66,15 +74,15 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
             
             smallMapView.addSubview(mapView)
         }
-        
-        setupInfo()
+ 
     }
     
     
     public func onMapView(_ mapView: NMapView!, initHandler error: NMapError!) {
         if (error == nil) { // success
             // set map center and level
-            mapView.setMapCenter(NGeoPoint(longitude:126.978371, latitude:37.5666091), atLevel:11)
+            print("N : \(resLocationN!), E: \(resLocationE!)" )
+            mapView.setMapCenter(NGeoPoint(longitude: resLocationN!, latitude: resLocationE!), atLevel:11)
             
             // set for retina display
             mapView.setMapEnlarged(true, mapHD: true)
@@ -314,6 +322,34 @@ class RestaurantInfoViewController: UIViewController , NMapViewDelegate, NMapPOI
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func addMarker() {
+        
+        if let mapOverlayManager = mapView?.mapOverlayManager {
+            
+            // create POI data overlay
+            if let poiDataOverlay = mapOverlayManager.newPOIdataOverlay() {
+                
+                poiDataOverlay.initPOIdata(1)
+                
+                let poiItem = poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: 126.979, latitude: 37.567), title: "Touch & Drag to Move", type: UserPOIflagTypeDefault, iconIndex: 0, with: nil)
+                
+                // set floating mode
+                poiItem?.setPOIflagMode(.touch)
+                
+                // hide right button on callout
+                poiItem?.hasRightCalloutAccessory = false
+                
+                poiDataOverlay.endPOIdata()
+                
+                // select item
+                poiDataOverlay.selectPOIitem(at: 0, moveToCenter: true)
+                
+                // show all POI data
+                poiDataOverlay.showAllPOIdata()
+            }
+        }
+    }
 
 
     

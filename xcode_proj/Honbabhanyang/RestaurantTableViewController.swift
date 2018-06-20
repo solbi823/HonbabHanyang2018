@@ -59,6 +59,8 @@ class RestaurantTableViewController: UITableViewController {
                 party.currentPeople = currentPeople
                 let wait1UID = rest["wait1UID"] as? String ?? ""
                 let wait2UID = rest["wait2UID"] as? String ?? ""
+                let locationN = rest["locationN"] as? Double ?? 0
+                let locationE = rest["locationE"] as? Double ?? 0
                 
                 // if my waiting party is created
                 if currentPeople == 0 && currentlyInParty == id{
@@ -66,12 +68,12 @@ class RestaurantTableViewController: UITableViewController {
 
                     // use wait1 and wait2 to create history entry////////////////////////////////
                     // create history data
-                    let data = HistoryCenter(rest: Restaurant(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber), user1ID: wait1UID, user2ID: wait2UID)
+                    let data = HistoryCenter(rest: Restaurant(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber, locationE : locationE, locationN: locationN))
                     data.save()
                 }
                 
                 // create new Restaurant class
-                let res = Restaurant.init(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber)
+                let res = Restaurant.init(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber, locationE: locationE, locationN: locationN)
                 res.parties = [party]
                 
                 // append restaurant to the array of restaurants
