@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+var pushOn = true
 
 class SettingViewController: UIViewController {
 
@@ -33,6 +34,7 @@ class SettingViewController: UIViewController {
         let isOn = !(setting.bool(forKey: "pushAlarm"))
         setting.set(isOn, forKey: "pushAlarm")
         pushAlarmSwitch.isOn = setting.bool(forKey: "pushAlarm")
+        pushOn = isOn
     }
     @IBAction func logOut(_ sender: Any) {
         let data = HistoryCenter()

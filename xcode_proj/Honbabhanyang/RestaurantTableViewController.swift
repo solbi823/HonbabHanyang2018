@@ -20,12 +20,15 @@ class RestaurantTableViewController: UITableViewController {
     
     // show notification
     func alertUser() {
+        if (pushOn)
+        {
         let alarmContent = UNMutableNotificationContent()
         alarmContent.title = "혼밥하냥"
         alarmContent.body = "매칭이 완료되었습니다! 지금 바로 확인!"
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
         let request = UNNotificationRequest(identifier: "timerdone", content: alarmContent, trigger: trigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        }
     }
     
     @objc func loadData() {
@@ -66,7 +69,6 @@ class RestaurantTableViewController: UITableViewController {
                 if currentPeople == 0 && currentlyInParty == id{
                     self.alertUser()
                     currentlyInParty = -1
-
                     // use wait1 and wait2 to create history entry////////////////////////////////
                     // create history data
                     let data = HistoryCenter(rest: Restaurant(id: id, name: name, region: region, genre: genre, phoneNumber: phoneNumber, locationE : locationE, locationN: locationN), user1ID: wait1UID, user2ID: wait2UID)
